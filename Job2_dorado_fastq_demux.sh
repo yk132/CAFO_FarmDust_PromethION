@@ -15,7 +15,7 @@ set -u
 #--------------------------------------------
 export STORE_DIR="/hpc/home/yk132/storage"
 export CAFO_DIR="${STORE_DIR}/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/"
-export CAFO_GIT_DIR="${CAFO_DIR}/CAFO_FarmDust_PromethION"
+export CAFO_GIT_DIR="${STORE_DIR}/CAFO_FarmDust_PromethION"
 export POD5_DIR="${CAFO_DIR}/20240521_1737_P2S-01272-B_PAS35763_a5f7cd95/pod5"
 
 ## fastq in storage folder
@@ -46,8 +46,9 @@ singularity exec \
        --bind /work:/work \
        --bind /hpc/group:/hpc/group \
        ${DORADO_SIF_PATH} \
-       dorado basecaller -r \
+       dorado basecaller \
+       #-r \
        --emit-fastq \
        ${DORADO_MODEL_DIR}/${DORADO_1041_SUP} \
-       $POD5_DIR/ \
+       $POD5_DIR/PAS35763_a5f7cd95_715c436e_0.pod5 \
        --kit-name SQKRBK114 > ${DORADO_RESULTS_DIR}/basecalled.fastq
