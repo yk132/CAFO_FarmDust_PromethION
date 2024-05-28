@@ -16,7 +16,7 @@ mkdir -p ${LOG_DIR}
 # Download Dorado Models
 JOBID_1=$(sbatch --parsable --job-name=download_model --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job1_download_model.sh)
 
-# Run Dorado
+# Run Dorado for one sample to see if code works
 JOBID_2=$(sbatch --parsable --dependency=afterok:${JOBID_1} --job-name=dorado --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_dorado_fastq_demux.sh)
 
 # Merge FASTQ files and check for quality with fastQC

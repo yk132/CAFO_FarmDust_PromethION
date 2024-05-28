@@ -11,8 +11,11 @@ set -u
 export DORADO_SIF_PATH='oras://gitlab-registry.oit.duke.edu/granek-lab/granek-container-images/dorado-simg:0.4.2'
 export WORK_DIR="/work/${USER}" # CHANGE ME if needed 
 export DORADO_MODEL_DIR="${WORK_DIR}/dorado_models" # CHANGE ME 
-export DORADO_1041_SUP="dna_r10.4.1_e8.2_400bps_sup@v5.0.0" # CHANGE ME 
+export DORADO_1041_SUP="dna_r10.4.1_e8.2_400bps_sup@v4.3.0" # CHANGE ME 
 #------------------------
+
+## Note: latest = ontresearch/dorado:sha614853bde0c7b6c4c5fa487a4c80f7509db92680
+# for simplicity, let's download all models: 
 
 
 if [ -d "${DORADO_1041_SUP}/${DORADO_1041_SUP}" ]; then
@@ -23,7 +26,6 @@ else
 
   singularity exec \
     --bind /work:/work \
-    ${DORADO_SIF_PATH} \
+    docker://ontresearch/dorado:latest \
     dorado download --directory $DORADO_MODEL_DIR --model $DORADO_1041_SUP
 fi
-

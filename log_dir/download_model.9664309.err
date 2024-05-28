@@ -1,0 +1,4 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-27 23:58:32.822] [info] Running: "download" "--directory" "/work/yk132/dorado_models" "--model" "sup"
+[2024-05-27 23:58:32.822] [error] Must set --data when using automatic model detection
