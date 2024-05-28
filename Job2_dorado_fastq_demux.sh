@@ -23,7 +23,7 @@ export DORADO_SIF_PATH='oras://gitlab-registry.oit.duke.edu/granek-lab/granek-co
 export CAFO_RES_DIR="${CAFO_DIR}/CAFO_PromethION_output"
 export WORK_DIR="/work/${USER}" # CHANGE ME if needed 
 export DORADO_MODEL_DIR="${WORK_DIR}/dorado_models" # CHANGE ME 
-export DORADO_1041_SUP="dna_r10.4.1_e8.2_400bps_sup@v4.3.0" # CHANGE ME 
+export DORADO_1041_SUP="dna_r10.4.1_e8.2_400bps_sup@v4.2.0" # CHANGE ME 
 export DORADO_RES_DIR="${CAFO_RES_DIR}/Job2_dorado_fastq_res"
 #--------------------------------------------
 
@@ -37,15 +37,16 @@ else
   export DORADO_DEVICE="cpu" ;
 fi
 echo $DORADO_DEVICE
+echo $DORADO_1041_SUP
 #------------------------
 
 singularity exec \
        --nv \
        --bind /work:/work \
        --bind /hpc/group:/hpc/group \
-       docker://ontresearch/dorado:latest \
+       ${DORADO_SIF_PATH} \
+       # dorado basecaller -r \
        dorado basecaller \
-#dorado basecaller -r \
        ${DORADO_MODEL_DIR}/${DORADO_1041_SUP} \
        ${POD5_DIR}/PAS35763_a5f7cd95_715c436e_0.pod5 \
        --emit-fastq \
