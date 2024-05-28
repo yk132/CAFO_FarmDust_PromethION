@@ -1,0 +1,5 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-28 09:42:36.475] [info] > Creating basecall pipeline
+[2024-05-28 09:42:39.818] [info]  - set batch size for cuda:0 to 448
+slurmstepd: error: *** JOB 9682627 ON dcc-chsi-gpu-01 CANCELLED AT 2024-05-28T09:43:36 ***

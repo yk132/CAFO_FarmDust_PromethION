@@ -1,0 +1,8 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-28 09:44:56.830] [info] > Creating basecall pipeline
+[2024-05-28 09:45:00.178] [info]  - set batch size for cuda:0 to 448
+[2024-05-28 16:41:01.653] [info] > Simplex reads basecalled: 674506
+[2024-05-28 16:41:01.660] [info] > Simplex reads filtered: 7333
+[2024-05-28 16:41:01.663] [info] > Basecalled @ Samples/s: 3.566000e+06
+[2024-05-28 16:41:03.329] [info] > Finished

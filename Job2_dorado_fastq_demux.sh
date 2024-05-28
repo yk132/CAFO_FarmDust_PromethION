@@ -40,14 +40,14 @@ echo $DORADO_DEVICE
 echo $DORADO_1041_SUP
 #------------------------
 
+
 singularity exec \
        --nv \
        --bind /work:/work \
        --bind /hpc/group:/hpc/group \
        ${DORADO_SIF_PATH} \
-       # dorado basecaller -r \
-       dorado basecaller \
+       dorado basecaller -r \
        ${DORADO_MODEL_DIR}/${DORADO_1041_SUP} \
-       ${POD5_DIR}/PAS35763_a5f7cd95_715c436e_0.pod5 \
+       ${POD5_DIR} \
        --emit-fastq \
-       --kit-name SQK-RBK114-24 > ${DORADO_RES_DIR}/basecalled.fastq
+       --no-trim > ${DORADO_RES_DIR}/basecalled.fastq 
