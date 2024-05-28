@@ -46,8 +46,8 @@ singularity exec \
        --bind /work:/work \
        --bind /hpc/group:/hpc/group \
        ${DORADO_SIF_PATH} \
-       dorado basecaller -r \
+       dorado duplex -r \
        ${DORADO_MODEL_DIR}/${DORADO_1041_SUP} \
        ${POD5_DIR} \
        --emit-fastq \
-       --no-trim > ${DORADO_RES_DIR}/basecalled.fastq 
+       --no-trim > ${DORADO_RES_DIR}/duplex_basecalled.fastq 
