@@ -1,0 +1,167 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-29 10:31:26] INFO: Starting Flye 2.9.4-b1799
+[2024-05-29 10:31:26] INFO: >>>STAGE: configure
+[2024-05-29 10:31:26] INFO: Configuring run
+[2024-05-29 10:31:27] INFO: Total read length: 88272042
+[2024-05-29 10:31:27] INFO: Reads N50/N90: 145240 / 27412
+[2024-05-29 10:31:27] INFO: Minimum overlap set to 10000
+[2024-05-29 10:31:27] INFO: >>>STAGE: assembly
+[2024-05-29 10:31:27] INFO: Assembling disjointigs
+[2024-05-29 10:31:27] INFO: Reading sequences
+[2024-05-29 10:31:27] INFO: Building minimizer index
+[2024-05-29 10:31:27] INFO: Pre-calculating index storage
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 10:31:28] INFO: Filling index
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 10:32:40] INFO: Extending reads
+[2024-05-29 10:47:42] INFO: Overlap-based coverage: 0
+[2024-05-29 10:47:42] INFO: Median overlap divergence: 0.252717
+0% 100% 
+[2024-05-29 10:48:55] INFO: Assembled 1 disjointigs
+[2024-05-29 10:48:56] INFO: Generating sequence
+[2024-05-29 10:48:56] INFO: Filtering contained disjointigs
+0% 100% 
+[2024-05-29 10:48:56] INFO: Contained seqs: 0
+[2024-05-29 10:48:56] INFO: >>>STAGE: consensus
+[2024-05-29 10:48:56] INFO: Running Minimap2
+[2024-05-29 10:49:32] INFO: Computing consensus
+[2024-05-29 10:49:43] INFO: Alignment error rate: 0.318532
+[2024-05-29 10:49:43] INFO: >>>STAGE: repeat
+[2024-05-29 10:49:43] INFO: Building and resolving repeat graph
+[2024-05-29 10:49:43] INFO: Parsing disjointigs
+[2024-05-29 10:49:43] INFO: Building repeat graph
+0% 100% 
+[2024-05-29 10:49:44] INFO: Median overlap divergence: 0
+[2024-05-29 10:49:44] INFO: Parsing reads
+[2024-05-29 10:49:44] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 10:50:39] INFO: Aligned read sequence: 12246 / 85227792 (0.000143686)
+[2024-05-29 10:50:39] INFO: Median overlap divergence: 0.229052
+[2024-05-29 10:50:39] INFO: Mean edge coverage: 0
+[2024-05-29 10:50:39] INFO: Simplifying the graph
+[2024-05-29 10:50:39] INFO: >>>STAGE: contigger
+[2024-05-29 10:50:39] INFO: Generating contigs
+[2024-05-29 10:50:39] INFO: Reading sequences
+[2024-05-29 10:50:39] INFO: Generated 0 contigs
+[2024-05-29 10:50:39] INFO: Added 0 scaffold connections
+[2024-05-29 10:50:39] ERROR: No contigs were assembled - pipeline stopped
+[2024-05-29 10:50:39] ERROR: Pipeline aborted
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-29 10:51:03] INFO: Starting Flye 2.9.4-b1799
+[2024-05-29 10:51:03] INFO: >>>STAGE: configure
+[2024-05-29 10:51:03] INFO: Configuring run
+[2024-05-29 10:51:03] INFO: Total read length: 42609729
+[2024-05-29 10:51:03] INFO: Reads N50/N90: 136444 / 23900
+[2024-05-29 10:51:03] INFO: Minimum overlap set to 10000
+[2024-05-29 10:51:03] INFO: >>>STAGE: assembly
+[2024-05-29 10:51:03] INFO: Assembling disjointigs
+[2024-05-29 10:51:03] INFO: Reading sequences
+[2024-05-29 10:51:03] INFO: Building minimizer index
+[2024-05-29 10:51:03] INFO: Pre-calculating index storage
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 10:51:03] INFO: Filling index
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 10:53:49] INFO: Extending reads
+[2024-05-29 11:17:50] INFO: Overlap-based coverage: 0
+[2024-05-29 11:17:50] INFO: Median overlap divergence: 0.25226
+0% 40% 100% 
+[2024-05-29 11:20:23] INFO: Assembled 1 disjointigs
+[2024-05-29 11:20:23] INFO: Generating sequence
+0% 100% 
+[2024-05-29 11:20:23] INFO: Filtering contained disjointigs
+0% 100% 
+[2024-05-29 11:20:26] INFO: Contained seqs: 0
+[2024-05-29 11:20:26] INFO: >>>STAGE: consensus
+[2024-05-29 11:20:26] INFO: Running Minimap2
+[2024-05-29 11:21:24] INFO: Computing consensus
+[2024-05-29 11:21:58] INFO: Alignment error rate: 0.312847
+[2024-05-29 11:21:58] INFO: >>>STAGE: repeat
+[2024-05-29 11:21:58] INFO: Building and resolving repeat graph
+[2024-05-29 11:21:58] INFO: Parsing disjointigs
+[2024-05-29 11:21:58] INFO: Building repeat graph
+0% 100% 
+[2024-05-29 11:22:13] INFO: Median overlap divergence: 0.192097
+[2024-05-29 11:22:13] INFO: Parsing reads
+[2024-05-29 11:22:13] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 11:42:55] INFO: Aligned read sequence: 142329 / 40553748 (0.00350964)
+[2024-05-29 11:42:55] INFO: Median overlap divergence: 0.232023
+[2024-05-29 11:42:55] INFO: Mean edge coverage: 0
+[2024-05-29 11:42:55] INFO: Simplifying the graph
+[2024-05-29 11:42:55] INFO: >>>STAGE: contigger
+[2024-05-29 11:42:55] INFO: Generating contigs
+[2024-05-29 11:42:55] INFO: Reading sequences
+[2024-05-29 11:42:55] INFO: Generated 0 contigs
+[2024-05-29 11:42:55] INFO: Added 0 scaffold connections
+[2024-05-29 11:42:55] ERROR: No contigs were assembled - pipeline stopped
+[2024-05-29 11:42:55] ERROR: Pipeline aborted
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-29 11:43:21] INFO: Starting Flye 2.9.4-b1799
+[2024-05-29 11:43:21] INFO: >>>STAGE: configure
+[2024-05-29 11:43:21] INFO: Configuring run
+[2024-05-29 11:43:21] INFO: Total read length: 33720844
+[2024-05-29 11:43:21] INFO: Reads N50/N90: 126552 / 131
+[2024-05-29 11:43:21] INFO: Minimum overlap set to 1000
+[2024-05-29 11:43:21] INFO: >>>STAGE: assembly
+[2024-05-29 11:43:21] INFO: Assembling disjointigs
+[2024-05-29 11:43:21] INFO: Reading sequences
+[2024-05-29 11:43:21] INFO: Building minimizer index
+[2024-05-29 11:43:21] INFO: Pre-calculating index storage
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 11:43:22] INFO: Filling index
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 11:46:32] INFO: Extending reads
+[2024-05-29 11:59:47] INFO: Overlap-based coverage: 0
+[2024-05-29 11:59:47] INFO: Median overlap divergence: 0.259662
+0% 20% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 12:02:32] INFO: Assembled 22 disjointigs
+[2024-05-29 12:02:32] INFO: Generating sequence
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 12:02:32] INFO: Filtering contained disjointigs
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 12:04:12] INFO: Contained seqs: 8
+[2024-05-29 12:04:12] INFO: >>>STAGE: consensus
+[2024-05-29 12:04:12] INFO: Running Minimap2
+[2024-05-29 12:19:18] INFO: Computing consensus
+[2024-05-29 12:19:28] INFO: Alignment error rate: 0.283391
+[2024-05-29 12:19:29] INFO: >>>STAGE: repeat
+[2024-05-29 12:19:29] INFO: Building and resolving repeat graph
+[2024-05-29 12:19:29] INFO: Parsing disjointigs
+[2024-05-29 12:19:29] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 12:27:25] INFO: Median overlap divergence: 0.196372
+[2024-05-29 12:27:25] INFO: Parsing reads
+[2024-05-29 12:27:26] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-29 12:30:02] INFO: Aligned read sequence: 1610731 / 28239576 (0.0570381)
+[2024-05-29 12:30:02] INFO: Median overlap divergence: 0.301327
+[2024-05-29 12:30:02] INFO: Mean edge coverage: 2
+[2024-05-29 12:30:02] INFO: Simplifying the graph
+[2024-05-29 12:30:05] INFO: >>>STAGE: contigger
+[2024-05-29 12:30:05] INFO: Generating contigs
+[2024-05-29 12:30:05] INFO: Reading sequences
+[2024-05-29 12:30:05] INFO: Generated 19 contigs
+[2024-05-29 12:30:05] INFO: Added 0 scaffold connections
+[2024-05-29 12:30:05] INFO: >>>STAGE: polishing
+[2024-05-29 12:30:05] INFO: Polishing genome (1/1)
+[2024-05-29 12:30:05] INFO: Running minimap2
+[2024-05-29 12:33:13] INFO: Separating alignment into bubbles
+[2024-05-29 12:33:41] INFO: Alignment error rate: 0.340506
+[2024-05-29 12:33:41] INFO: Correcting bubbles
+0% 10% 20% 70% 100% 
+[2024-05-29 12:37:51] INFO: >>>STAGE: finalize
+[2024-05-29 12:37:51] INFO: Assembly statistics:
+
+	Total length:	230716
+	Fragments:	11
+	Fragments N50:	207258
+	Largest frg:	207258
+	Scaffolds:	0
+	Mean coverage:	10
+
+[2024-05-29 12:37:51] INFO: Final assembly: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job5_flye_res/Blank/assembly.fasta
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
