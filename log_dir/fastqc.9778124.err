@@ -1,0 +1,79 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Converting OCI blobs to SIF format
+INFO:    Starting build...
+Getting image source signatures
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying blob sha256:06d39c85623a79eb68b6cac39f4c4aba8834873ee5fc27be9d9d7655e6313c26
+Copying blob sha256:0f24483d73444a81395918a7d24321f9803797be72cd67bcd19882fdb61f328f
+Copying blob sha256:a0724c66af04d35ff16b2c76fb0a6d6eac47127717771f49646da0cbbb3c2f6a
+Copying config sha256:7c5b6b96d77e8f4a3ce8e7bfa36fb342ef151088a89b4d66affbcf41461ae6fa
+Writing manifest to image destination
+Storing signatures
+2024/05/29 09:48:40  info unpack layer: sha256:06d39c85623a79eb68b6cac39f4c4aba8834873ee5fc27be9d9d7655e6313c26
+2024/05/29 09:48:41  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/05/29 09:48:41  warn xattr{/work/yk132/tmp/build-temp-4104506783/rootfs/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/05/29 09:49:02  info unpack layer: sha256:0f24483d73444a81395918a7d24321f9803797be72cd67bcd19882fdb61f328f
+2024/05/29 09:49:17  warn xattr{usr/local/share/fonts} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/05/29 09:49:17  warn xattr{/work/yk132/tmp/build-temp-4104506783/rootfs/usr/local/share/fonts} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/05/29 09:49:33  info unpack layer: sha256:a0724c66af04d35ff16b2c76fb0a6d6eac47127717771f49646da0cbbb3c2f6a
+2024/05/29 09:49:36  info unpack layer: sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+INFO:    Creating SIF file...
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Started analysis of Blank.fastq
+Started analysis of Farm_A.fastq
+Started analysis of Farm_C.fastq
+Approx 5% complete for Blank.fastq
+Approx 5% complete for Farm_C.fastq
+Approx 10% complete for Blank.fastq
+Approx 15% complete for Blank.fastq
+Approx 5% complete for Farm_A.fastq
+Approx 20% complete for Blank.fastq
+Approx 15% complete for Farm_C.fastq
+Approx 25% complete for Blank.fastq
+Approx 30% complete for Blank.fastq
+Approx 25% complete for Farm_C.fastq
+Approx 35% complete for Blank.fastq
+Approx 40% complete for Blank.fastq
+Approx 35% complete for Farm_C.fastq
+Approx 15% complete for Farm_A.fastq
+Approx 45% complete for Blank.fastq
+Approx 45% complete for Farm_C.fastq
+Approx 50% complete for Blank.fastq
+Approx 55% complete for Blank.fastq
+Approx 50% complete for Farm_C.fastq
+Approx 60% complete for Blank.fastq
+Approx 65% complete for Blank.fastq
+Approx 60% complete for Farm_C.fastq
+Approx 70% complete for Blank.fastq
+Approx 30% complete for Farm_A.fastq
+Approx 75% complete for Blank.fastq
+Approx 80% complete for Blank.fastq
+Approx 70% complete for Farm_C.fastq
+Approx 85% complete for Blank.fastq
+Approx 75% complete for Farm_C.fastq
+Approx 90% complete for Blank.fastq
+Approx 40% complete for Farm_A.fastq
+Approx 95% complete for Blank.fastq
+Approx 80% complete for Farm_C.fastq
+Approx 90% complete for Farm_C.fastq
+Approx 55% complete for Farm_A.fastq
+Approx 65% complete for Farm_A.fastq
+Approx 80% complete for Farm_A.fastq
+Approx 85% complete for Farm_A.fastq
+Approx 90% complete for Farm_A.fastq
+Approx 95% complete for Farm_A.fastq
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
