@@ -1,0 +1,6 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-29 09:21:00.218] [info] > starting barcode demuxing
+[2024-05-29 09:21:13.839] [info] > Simplex reads basecalled: 674562
+[2024-05-29 09:21:13.839] [info] > 674562 reads demuxed @ classifications/s: 4.952368e+04
+[2024-05-29 09:21:13.839] [info] > finished barcode demuxing

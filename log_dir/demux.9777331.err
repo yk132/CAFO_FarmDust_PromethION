@@ -1,0 +1,5 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Could not read header from file: -
+/var/spool/slurmd/job9777331/slurm_script: line 51: 1987999 Aborted                 singularity exec --nv --bind /work:/work --bind /hpc/group:/hpc/group ${DORADO_SIF_PATH} dorado demux --output-dir ${DEMUX_RES_DIR} --kit-name ${KIT_NAME} --emit-fastq
