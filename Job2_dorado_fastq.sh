@@ -50,4 +50,4 @@ singularity exec \
        ${DORADO_MODEL_DIR}/${DORADO_1041_SUP} \
        ${POD5_DIR} \
        --emit-fastq \
-       --no-trim > ${DORADO_RES_DIR}/duplex_basecalled.fastq 
+       --device ${DORADO_DEVICE} > ${DORADO_RES_DIR}/duplex_basecalled.fastq 

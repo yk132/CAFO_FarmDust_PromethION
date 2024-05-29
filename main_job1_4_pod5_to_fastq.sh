@@ -20,7 +20,7 @@ mkdir -p ${LOG_DIR}
 #JOBID_2=$(sbatch --parsable --dependency=afterok:${JOBID_1} --job-name=dorado --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_dorado_fastq_demux.sh)
 
 #### Remove dependency for checking
-JOBID_2=$(sbatch --parsable --job-name=dorado --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_dorado_fastq_demux.sh)
+JOBID_2=$(sbatch --parsable --job-name=dorado --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_dorado_fastq.sh)
 # Merge FASTQ files and check for quality with fastQC
 # JOBID_4=$(sbatch --parsable --dependency=afterok:${JOBID_3} --job-name=fastqc --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_merge_fastq_fastqc.sh)
 

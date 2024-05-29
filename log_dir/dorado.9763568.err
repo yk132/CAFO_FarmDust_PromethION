@@ -1,0 +1,14 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-28 18:19:19.074] [info] > No duplex pairs file provided, pairing will be performed automatically
+[2024-05-28 18:19:22.651] [info]  - downloading dna_r10.4.1_e8.2_5khz_stereo@v1.1 with httplib
+[2024-05-28 18:19:36.925] [info]  - set batch size for cuda:0 to 384
+[2024-05-28 18:19:37.828] [info]  - set batch size for cuda:0 to 512
+[2024-05-28 18:19:37.828] [info] > Starting Stereo Duplex pipeline
+[2024-05-28 18:19:37.930] [info] > Reading read channel info
+[2024-05-28 18:19:51.002] [info] > Processed read channel info
+[2024-05-29 01:13:58.051] [info] > Simplex reads basecalled: 674562
+[2024-05-29 01:13:58.301] [info] > Simplex reads filtered: 7333
+[2024-05-29 01:13:58.301] [info] > Duplex reads basecalled: 0
+[2024-05-29 01:13:58.301] [info] > Duplex rate: 0%
+[2024-05-29 01:13:58.314] [info] > Basecalled @ Bases/s: 4.363458e+04
