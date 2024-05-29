@@ -37,7 +37,8 @@ singularity exec \
 	flye --nano-hq $FARM_A \
  	-o $FLYE_A_DIR \
   	--meta \
-   	-t $NTHREADS
+   	-t $NTHREADS \
+	--asm-coverage 50
 
 # Run metaFlye for Farm C
 singularity exec \
@@ -47,7 +48,8 @@ singularity exec \
 	flye --nano-hq $FARM_C \
  	-o $FLYE_C_DIR \
   	--meta \
-   	-t $NTHREADS
+   	-t $NTHREADS \
+	--asm-coverage 50
 
 # Run metaFlye for blank
 singularity exec \
@@ -57,9 +59,10 @@ singularity exec \
 	flye --nano-hq $FARM_BLANK \
  	-o $FLYE_BLANK_DIR \
   	--meta \
-   	-t $NTHREADS
+   	-t $NTHREADS \
+	--asm-coverage 50
 
-# Run metaFlye for Farm A
+# get version
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
