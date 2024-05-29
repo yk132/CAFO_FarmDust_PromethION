@@ -17,10 +17,12 @@ mkdir -p ${LOG_DIR}
 #JOBID_1=$(sbatch --parsable --job-name=download_model --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job1_download_model.sh)
 
 # Run Dorado for one sample to see if code works
-#JOBID_2=$(sbatch --parsable --dependency=afterok:${JOBID_1} --job-name=dorado --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_dorado_fastq_demux.sh)
+#JOBID_2=$(sbatch --parsable --dependency=afterok:${JOBID_1} --job-name=dorado --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_dorado_fastq.sh)
 
-#### Remove dependency for checking
-JOBID_2=$(sbatch --parsable --job-name=dorado --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_dorado_fastq.sh)
+# Step 3: Demux: add dependency later!!
+
+JOBID_3=$(sbatch --parsable --job-name=demux --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job3_demux.sh)
+
 # Merge FASTQ files and check for quality with fastQC
 # JOBID_4=$(sbatch --parsable --dependency=afterok:${JOBID_3} --job-name=fastqc --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_merge_fastq_fastqc.sh)
 

@@ -35,6 +35,6 @@ singularity exec \
        ${DORADO_SIF_PATH} \
        dorado demux \
        --output-dir ${DEMUX_RES_DIR}  \
-       --kit-name ${KIT_NAME} \ 
+       --kit-name ${KIT_NAME} \
        --emit-fastq \
        --threads ${NTHREADS} 
