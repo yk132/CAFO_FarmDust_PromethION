@@ -34,33 +34,30 @@ singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/flye:2.9.4 \
-	flye --nano-hq $FARM_A \
+	flye --nano-raw $FARM_A \
  	-o $FLYE_A_DIR \
   	--meta \
-   	-t $NTHREADS \
-	--asm-coverage 50
+   	-t $NTHREADS 
 
 # Run metaFlye for Farm C
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/flye:2.9.4 \
-	flye --nano-hq $FARM_C \
+	flye --nano-raw $FARM_C \
  	-o $FLYE_C_DIR \
   	--meta \
-   	-t $NTHREADS \
-	--asm-coverage 50
+   	-t $NTHREADS
 
 # Run metaFlye for blank
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/flye:2.9.4 \
-	flye --nano-hq $FARM_BLANK \
+	flye --nano-raw $FARM_BLANK \
  	-o $FLYE_BLANK_DIR \
   	--meta \
-   	-t $NTHREADS \
-	--asm-coverage 50
+   	-t $NTHREADS 
 
 # get version
 singularity exec \
