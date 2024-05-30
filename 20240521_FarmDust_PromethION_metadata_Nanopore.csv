@@ -1,0 +1,6 @@
+flow_cell_id,kit,sample_id,experiment_id,barcode,alias,type
+PAS35765,SQK-RBK114-24,Farm_A,CAFO_FarmDust_PromethION,barcode17,Farm_A,farm_dust_sample
+PAS35765,SQK-RBK114-24,Farm_A,CAFO_FarmDust_PromethION,barcode18,Farm_A,farm_dust_sample
+PAS35765,SQK-RBK114-24,Farm_C,CAFO_FarmDust_PromethION,barcode19,Farm_C,farm_dust_sample
+PAS35765,SQK-RBK114-24,Farm_C,CAFO_FarmDust_PromethION,barcode20,Farm_C,farm_dust_sample
+PAS35765,SQK-RBK114-24,Blanks_pooled,CAFO_FarmDust_PromethION,barcode21,Blanks_pooled,Blanks_pooled
