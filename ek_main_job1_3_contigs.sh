@@ -11,10 +11,11 @@ export LOG_DIR="${CAFO_GIT_DIR}/log_dir"
 #-----------------------------
 
 mkdir -p ${LOG_DIR}
-# this file covers: building contigs with metaSPAdes, QC with QUAST, mapping with Bowtie2, and visualization with angi'o  
+# this file covers: fastQC, building contigs with metaSPAdes, QC with QUAST, mapping with Bowtie2, and visualization with angi'o  
 
-# Download Dorado Models
-JOBID_5=$(sbatch --parsable --job-name=metaFlye --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job5_metaFlye.sh)
+
+# quailty check with fastQC 
+JOBID_1=$(sbatch --parsable --job-name=fastQC --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job1_fastqc.sh)
 
 # quailty check with QUAST
 #JOBID_6=$(sbatch --parsable --dependency=afterok:${JOBID_5} --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job6_QUAST.sh)

@@ -1,0 +1,98 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Started analysis of Blanks_pooled.fastq.gz
+Started analysis of Farm_A.fastq.gz
+Started analysis of Farm_C.fastq.gz
+Started analysis of unclassified.fastq.gz
+Approx 5% complete for Blanks_pooled.fastq.gz
+Approx 10% complete for Blanks_pooled.fastq.gz
+Approx 5% complete for Farm_A.fastq.gz
+Approx 5% complete for Farm_C.fastq.gz
+Approx 15% complete for Blanks_pooled.fastq.gz
+Approx 10% complete for Farm_A.fastq.gz
+Approx 10% complete for Farm_C.fastq.gz
+Approx 20% complete for Blanks_pooled.fastq.gz
+Approx 15% complete for Farm_A.fastq.gz
+Approx 15% complete for Farm_C.fastq.gz
+Approx 25% complete for Blanks_pooled.fastq.gz
+Approx 30% complete for Blanks_pooled.fastq.gz
+Approx 20% complete for Farm_C.fastq.gz
+Approx 20% complete for Farm_A.fastq.gz
+Approx 35% complete for Blanks_pooled.fastq.gz
+Approx 25% complete for Farm_C.fastq.gz
+Approx 25% complete for Farm_A.fastq.gz
+Approx 30% complete for Farm_C.fastq.gz
+Approx 30% complete for Farm_A.fastq.gz
+Approx 40% complete for Blanks_pooled.fastq.gz
+Approx 45% complete for Blanks_pooled.fastq.gz
+Approx 35% complete for Farm_C.fastq.gz
+Approx 50% complete for Blanks_pooled.fastq.gz
+Approx 55% complete for Blanks_pooled.fastq.gz
+Approx 40% complete for Farm_C.fastq.gz
+Approx 60% complete for Blanks_pooled.fastq.gz
+Approx 45% complete for Farm_C.fastq.gz
+Approx 65% complete for Blanks_pooled.fastq.gz
+Approx 35% complete for Farm_A.fastq.gz
+Approx 70% complete for Blanks_pooled.fastq.gz
+Approx 50% complete for Farm_C.fastq.gz
+Approx 40% complete for Farm_A.fastq.gz
+Approx 75% complete for Blanks_pooled.fastq.gz
+Approx 55% complete for Farm_C.fastq.gz
+Approx 80% complete for Blanks_pooled.fastq.gz
+Approx 60% complete for Farm_C.fastq.gz
+Approx 85% complete for Blanks_pooled.fastq.gz
+Approx 45% complete for Farm_A.fastq.gz
+Approx 90% complete for Blanks_pooled.fastq.gz
+Approx 65% complete for Farm_C.fastq.gz
+Approx 95% complete for Blanks_pooled.fastq.gz
+Approx 70% complete for Farm_C.fastq.gz
+Approx 50% complete for Farm_A.fastq.gz
+Approx 75% complete for Farm_C.fastq.gz
+Approx 55% complete for Farm_A.fastq.gz
+Approx 80% complete for Farm_C.fastq.gz
+Approx 5% complete for unclassified.fastq.gz
+Approx 85% complete for Farm_C.fastq.gz
+Approx 60% complete for Farm_A.fastq.gz
+Approx 90% complete for Farm_C.fastq.gz
+Approx 95% complete for Farm_C.fastq.gz
+Approx 65% complete for Farm_A.fastq.gz
+Approx 70% complete for Farm_A.fastq.gz
+Approx 75% complete for Farm_A.fastq.gz
+Approx 80% complete for Farm_A.fastq.gz
+Approx 85% complete for Farm_A.fastq.gz
+Approx 90% complete for Farm_A.fastq.gz
+Approx 95% complete for Farm_A.fastq.gz
+Approx 10% complete for unclassified.fastq.gz
+Approx 15% complete for unclassified.fastq.gz
+Approx 20% complete for unclassified.fastq.gz
+Approx 25% complete for unclassified.fastq.gz
+Approx 30% complete for unclassified.fastq.gz
+Approx 35% complete for unclassified.fastq.gz
+Approx 40% complete for unclassified.fastq.gz
+Approx 45% complete for unclassified.fastq.gz
+Approx 50% complete for unclassified.fastq.gz
+Approx 55% complete for unclassified.fastq.gz
+Approx 60% complete for unclassified.fastq.gz
+Approx 65% complete for unclassified.fastq.gz
+Approx 70% complete for unclassified.fastq.gz
+Approx 75% complete for unclassified.fastq.gz
+Approx 80% complete for unclassified.fastq.gz
+Approx 85% complete for unclassified.fastq.gz
+Approx 90% complete for unclassified.fastq.gz
+Approx 95% complete for unclassified.fastq.gz
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").

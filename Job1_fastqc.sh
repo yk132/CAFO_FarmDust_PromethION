@@ -22,8 +22,8 @@ export FARM_BLANK="${DEMUX_RES_DIR}/Blanks_pooled.fastq.gz"
 export UNCLASSIFIED_BLANK="${DEMUX_RES_DIR}/unclassified.fastq.gz"
 export FASTQC_RES_DIR="${CAFO_RES_DIR}/Job1_fastqc_res"
 
-export PIPELINE_DIR="/work/${USER}/CAFO_PromethION/" ## CHANGE ME
-export PIPELINE_RES="${PIPELINE_DIR}/results/"
+export PIPELINE_DIR="/work/${USER}/CAFO_PromethION" ## CHANGE ME
+export PIPELINE_RES="${PIPELINE_DIR}/results"
 export PIPELINE_DEMUX="${PIPELINE_RES}/simplex_filtered_fastqs"
 #----------------------------------
 
@@ -31,7 +31,7 @@ export PIPELINE_DEMUX="${PIPELINE_RES}/simplex_filtered_fastqs"
 mkdir -p $DEMUX_RES_DIR
 mkdir -p $FASTQC_RES_DIR
 
-cp $PIPELINE_DEMUX/*.fastq.gz $DEMUX_RES_DIR/*.fastq.gz
+cp $PIPELINE_DEMUX/*.fastq.gz $DEMUX_RES_DIR
 
 # Run FastQC on raw reads
 singularity exec \
