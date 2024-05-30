@@ -15,12 +15,12 @@ mkdir -p ${LOG_DIR}
 # and again using wf_metagenomics pipeline to convert minimap2 results to tsv (sam -> bam -> tsv) 
 
 # Download database
-JOBID_4=$(sbatch --parsable --job-name=getdb --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_getdb.sh)
+#JOBID_4=$(sbatch --parsable --job-name=getdb --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_getdb.sh)
 ## this yields an error that I can't really track back but still downloads the database
 
 # Run minimap2 and convert res to bam 
 ## this is for CHECKING!!!
-# JOBID_9=$(sbatch --parsable --job-name=minimap --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job9_minimap2.sh)
+JOBID_5=$(sbatch --parsable --job-name=minimap --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job5_minimap2.sh)
 
 #JOBID_9=$(sbatch --parsable --dependency=afterok:${JOBID_8} --job-name=minimap --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job9_minimap2.sh)
 

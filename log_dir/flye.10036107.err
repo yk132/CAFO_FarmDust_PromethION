@@ -219,4 +219,23 @@ INFO:    Using cached SIF image
 [2024-05-30 14:23:47] INFO: Extending reads
 [2024-05-30 14:25:50] INFO: Overlap-based coverage: 0
 [2024-05-30 14:25:51] INFO: Median overlap divergence: 0.301759
-0% 10% 
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 14:43:26] INFO: Assembled 1069 disjointigs
+[2024-05-30 14:43:26] INFO: Generating sequence
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 14:43:34] INFO: Filtering contained disjointigs
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 15:06:46] INFO: Contained seqs: 288
+[2024-05-30 15:06:58] INFO: >>>STAGE: consensus
+[2024-05-30 15:06:59] INFO: Running Minimap2
+[2024-05-30 15:41:16] INFO: Computing consensus
+[2024-05-30 15:41:46] INFO: Alignment error rate: 0.339451
+[2024-05-30 15:41:47] INFO: >>>STAGE: repeat
+[2024-05-30 15:41:47] INFO: Building and resolving repeat graph
+[2024-05-30 15:41:47] INFO: Parsing disjointigs
+[2024-05-30 15:41:47] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 16:53:52] INFO: Median overlap divergence: 0.401262
+[2024-05-30 16:53:52] INFO: Parsing reads
+[2024-05-30 16:54:00] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 

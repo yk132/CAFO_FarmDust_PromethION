@@ -30,7 +30,7 @@ export DATABASE_DIR="${DB_DIR}/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db"
 export DATABASE_FNA="${DATABASE_DIR}/ncbi_16s_18s_28s_ITS.fna"
 export DATABASE_MMI="${DATABASE_DIR}/ncbi_16s_18s_28s_ITS.mmi"
 export FARMA_SAM="${MINI_RESULTS_DIR}/farmA_alignment.sam"
-export FARMB_SAM="${MINI_RESULTS_DIR}/farmC_alignment.sam"
+export FARMC_SAM="${MINI_RESULTS_DIR}/farmC_alignment.sam"
 export FARM_BLANK_SAM="${MINI_RESULTS_DIR}/farmBlank_alignment.sam"
 export UNCLASSIFIED_SAM="${MINI_RESULTS_DIR}/unclassified_alignment.sam"
 export FARMA_BAM="${MINI_RESULTS_DIR}/farmA_alignment.bam"
@@ -40,7 +40,7 @@ export UNCLASSIFIED_BAM="${MINI_RESULTS_DIR}/unclassified_alignment.bam"
 #------------------------------
 
 # make output directories 
-mkdir -p $MINIMAP2_OUTPUT
+mkdir -p $MINI_RESULTS_DIR
 
 # Make minimap2 index (MMI) File
 singularity exec \

@@ -1,0 +1,65 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Converting OCI blobs to SIF format
+INFO:    Starting build...
+Getting image source signatures
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying blob sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e
+Copying blob sha256:06c0f666c577bc9f2ffae73d807cb65722becf18bc88c0c9f0a2606ec093af0f
+Copying blob sha256:521b2d26925a535b7be4523f957e480e90c8d654bc9737847eed9fedab76ecd1
+Copying config sha256:09ed34712f9fabb75709666a0b307e4f508a524e93df993cfb0626e5e8e9333c
+Writing manifest to image destination
+Storing signatures
+2024/05/30 14:45:35  info unpack layer: sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e
+2024/05/30 14:45:36  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/05/30 14:45:36  warn xattr{/work/yk132/tmp/build-temp-2511893989/rootfs/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/05/30 14:46:44  info unpack layer: sha256:06c0f666c577bc9f2ffae73d807cb65722becf18bc88c0c9f0a2606ec093af0f
+2024/05/30 14:46:52  warn xattr{var/log/apt/term.log} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/05/30 14:46:52  warn xattr{/work/yk132/tmp/build-temp-2511893989/rootfs/var/log/apt/term.log} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/05/30 14:46:52  info unpack layer: sha256:521b2d26925a535b7be4523f957e480e90c8d654bc9737847eed9fedab76ecd1
+2024/05/30 14:46:53  warn xattr{minimap2-2.26_x64-linux} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/05/30 14:46:53  warn xattr{/work/yk132/tmp/build-temp-2511893989/rootfs/minimap2-2.26_x64-linux} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/05/30 14:46:53  info unpack layer: sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+INFO:    Creating SIF file...
+[M::mm_idx_gen::2.520*0.88] collected minimizers
+[M::mm_idx_gen::2.779*1.65] sorted minimizers
+[M::main::2.948*1.61] loaded/built the index for 55312 target sequence(s)
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::2.968*1.61] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -d /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.fna
+[M::main] Real time: 3.829 sec; CPU: 4.820 sec; Peak RSS: 0.401 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::main::0.459*0.85] loaded/built the index for 55312 target sequence(s)
+[M::mm_mapopt_update::0.488*0.85] mid_occ = 4248
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::0.507*0.86] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::worker_pipeline::5.085*12.67] mapped 79560 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Farm_A.fastq.gz
+[M::main] Real time: 5.103 sec; CPU: 64.469 sec; Peak RSS: 0.450 GB
+/var/spool/slurmd/job10044787/slurm_script: line 64: FARMC_SAM: unbound variable
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::main::0.195*1.68] loaded/built the index for 55312 target sequence(s)
+[M::mm_mapopt_update::0.222*1.59] mid_occ = 4248
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::0.241*1.54] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::worker_pipeline::3.254*9.13] mapped 110253 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Blanks_pooled.fastq.gz
+[M::main] Real time: 3.273 sec; CPU: 29.709 sec; Peak RSS: 0.381 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::main::0.133*1.65] loaded/built the index for 55312 target sequence(s)
+[M::mm_mapopt_update::0.161*1.53] mid_occ = 4248
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::0.180*1.48] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::worker_pipeline::89.282*29.19] mapped 299210 sequences
+[M::worker_pipeline::124.493*29.67] mapped 106316 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/unclassified.fastq.gz
+[M::main] Real time: 124.526 sec; CPU: 3693.790 sec; Peak RSS: 2.045 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+/var/spool/slurmd/job10044787/slurm_script: line 100: FARMC_SAM: unbound variable

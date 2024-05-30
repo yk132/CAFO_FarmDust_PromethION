@@ -1,0 +1,59 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::mm_idx_gen::1.705*1.22] collected minimizers
+[M::mm_idx_gen::1.963*2.26] sorted minimizers
+[M::main::2.087*2.19] loaded/built the index for 55312 target sequence(s)
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::2.107*2.18] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -d /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.fna
+[M::main] Real time: 3.439 sec; CPU: 4.633 sec; Peak RSS: 0.400 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::main::0.696*0.62] loaded/built the index for 55312 target sequence(s)
+[M::mm_mapopt_update::0.737*0.64] mid_occ = 4248
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::0.764*0.65] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::worker_pipeline::4.549*14.22] mapped 79560 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Farm_A.fastq.gz
+[M::main] Real time: 4.565 sec; CPU: 64.694 sec; Peak RSS: 0.452 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::main::0.150*1.58] loaded/built the index for 55312 target sequence(s)
+[M::mm_mapopt_update::0.181*1.48] mid_occ = 4248
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::0.199*1.43] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::worker_pipeline::4.373*10.37] mapped 97104 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Farm_C.fastq.gz
+[M::main] Real time: 4.393 sec; CPU: 45.368 sec; Peak RSS: 0.388 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::main::0.175*1.79] loaded/built the index for 55312 target sequence(s)
+[M::mm_mapopt_update::0.203*1.68] mid_occ = 4248
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::0.222*1.62] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::worker_pipeline::2.895*10.18] mapped 110253 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Blanks_pooled.fastq.gz
+[M::main] Real time: 2.910 sec; CPU: 29.472 sec; Peak RSS: 0.377 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[M::main::0.140*1.81] loaded/built the index for 55312 target sequence(s)
+[M::mm_mapopt_update::0.167*1.67] mid_occ = 4248
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 55312
+[M::mm_idx_stat::0.186*1.60] distinct minimizers: 1207899 (63.22% are singletons); average occurrences: 9.231; average spacing: 5.554; total length: 61933031
+[M::worker_pipeline::88.308*29.59] mapped 299210 sequences
+[M::worker_pipeline::123.802*29.93] mapped 106316 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /minimap2-2.26_x64-linux/minimap2 -ax map-ont -t 32 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.mmi /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/unclassified.fastq.gz
+[M::main] Real time: 123.834 sec; CPU: 3705.280 sec; Peak RSS: 2.044 GB
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
