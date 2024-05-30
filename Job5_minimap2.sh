@@ -34,7 +34,7 @@ export FARMB_SAM="${MINI_RESULTS_DIR}/farmC_alignment.sam"
 export FARM_BLANK_SAM="${MINI_RESULTS_DIR}/farmBlank_alignment.sam"
 export UNCLASSIFIED_SAM="${MINI_RESULTS_DIR}/unclassified_alignment.sam"
 export FARMA_BAM="${MINI_RESULTS_DIR}/farmA_alignment.bam"
-export FARMB_BAM="${MINI_RESULTS_DIR}/farmC_alignment.bam"
+export FARMC_BAM="${MINI_RESULTS_DIR}/farmC_alignment.bam"
 export FARM_BLANK_BAM="${MINI_RESULTS_DIR}/farmBlank_alignment.bam"
 export UNCLASSIFIED_BAM="${MINI_RESULTS_DIR}/unclassified_alignment.bam"
 #------------------------------
@@ -48,7 +48,8 @@ singularity exec \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/minimap2:2.26 \
 	minimap2 -ax map-ont \
- 	-d $DATABASE_MMI $DATABASE_FNA
+ 	-d $DATABASE_MMI $DATABASE_FNA \
+  	-t $NTHREADS
 
 # Run minimap2 on farmA
 singularity exec \
@@ -56,24 +57,37 @@ singularity exec \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/minimap2:2.26 \
 	minimap2 -ax map-ont \
- 	$DATABASE_MMI $FARM_A > $BAR01_SAM
+ 	-t $NTHREADS \
+ 	$DATABASE_MMI $FARM_A > $FARMA_SAM
  	
-# Run minimap2 on barcode02
+# Run minimap2 on Farm C
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/minimap2:2.26 \
 	minimap2 -ax map-ont \
- 	$DATABASE_MMI $FARM_C > $BAR02_SAM
+ 	-t $NTHREADS \
+ 	$DATABASE_MMI $FARM_C > $FARMC_SAM
  	
-# Run minimap2 on barcode03
+# Run minimap2 on blanks
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/minimap2:2.26 \
 	minimap2 -ax map-ont \
- 	$DATABASE_MMI $BAR03_MERGED > $BAR03_SAM
+ 	-t $NTHREADS \
+ 	$DATABASE_MMI $FARM_BLANK > $FARM_BLANK_SAM
 
+# Run minimap2 on unclassified reads
+singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://staphb/minimap2:2.26 \
+	minimap2 -ax map-ont \
+ 	-t $NTHREADS \
+ 	$DATABASE_MMI $UNCLASSIFIED > $UNCLASSIFIED_SAM
+
+  
 # make .bam files using samtools 
 ## staphb/samtools = staphb/samtools:1.19
 
@@ -81,16 +95,23 @@ singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/samtools:1.19 \
-	samtools view -b $BAR01_SAM -o $BAR01_BAM
+	samtools view -b $FARMA_SAM -o $FARMA_BAM
 	
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/samtools:1.19 \
-	samtools view -b $BAR02_SAM -o $BAR02_BAM
+	samtools view -b $FARMC_SAM -o $FARMC_BAM
 	
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/samtools:1.19 \
-	samtools view -b $BAR03_SAM -o $BAR03_BAM
+	samtools view -b $FARM_BLANK_SAM -o $FARM_BLANK_BAM
+
+singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://staphb/samtools:1.19 \
+	samtools view -b $UNCLASSIFIED_SAM -o $UNCLASSIFIED_BAM
+
