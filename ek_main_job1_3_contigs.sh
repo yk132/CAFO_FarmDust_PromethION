@@ -15,7 +15,12 @@ mkdir -p ${LOG_DIR}
 
 
 # quailty check with fastQC 
-JOBID_1=$(sbatch --parsable --job-name=fastQC --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job1_fastqc.sh)
+# JOBID_1=$(sbatch --parsable --job-name=fastQC --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job1_fastqc.sh)
+
+# build contigs; need to add dependency later! 
+JOBID_2=$(sbatch --parsable --job-name=flye --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_metaFlye.sh)
+
+#### PICK UP HERE!! 
 
 # quailty check with QUAST
 #JOBID_6=$(sbatch --parsable --dependency=afterok:${JOBID_5} --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job6_QUAST.sh)

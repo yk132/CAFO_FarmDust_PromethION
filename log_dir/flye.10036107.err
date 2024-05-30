@@ -1,0 +1,222 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-30 11:53:44] INFO: Starting Flye 2.9.4-b1799
+[2024-05-30 11:53:46] INFO: >>>STAGE: configure
+[2024-05-30 11:53:46] INFO: Configuring run
+[2024-05-30 11:53:47] INFO: Total read length: 43986282
+[2024-05-30 11:53:47] INFO: Reads N50/N90: 37021 / 109
+[2024-05-30 11:53:47] INFO: Minimum overlap set to 1000
+[2024-05-30 11:53:47] INFO: >>>STAGE: assembly
+[2024-05-30 11:53:47] INFO: Assembling disjointigs
+[2024-05-30 11:53:48] INFO: Reading sequences
+[2024-05-30 11:53:50] INFO: Counting k-mers:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 11:55:03] INFO: Filling index table (1/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 11:55:07] INFO: Filling index table (2/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 11:56:45] INFO: Extending reads
+[2024-05-30 12:11:11] INFO: Overlap-based coverage: 3
+[2024-05-30 12:11:12] INFO: Median overlap divergence: 0.309111
+0% 20% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:13:35] INFO: Assembled 157 disjointigs
+[2024-05-30 12:13:35] INFO: Generating sequence
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:13:36] INFO: Filtering contained disjointigs
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:13:49] INFO: Contained seqs: 30
+[2024-05-30 12:13:51] INFO: >>>STAGE: consensus
+[2024-05-30 12:13:51] INFO: Running Minimap2
+[2024-05-30 12:18:00] INFO: Computing consensus
+[2024-05-30 12:18:06] INFO: Alignment error rate: 0.329712
+[2024-05-30 12:18:08] INFO: >>>STAGE: repeat
+[2024-05-30 12:18:08] INFO: Building and resolving repeat graph
+[2024-05-30 12:18:08] INFO: Parsing disjointigs
+[2024-05-30 12:18:10] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:21:24] INFO: Median overlap divergence: 0.362493
+[2024-05-30 12:21:24] INFO: Parsing reads
+[2024-05-30 12:21:26] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:22:10] INFO: Aligned read sequence: 20490400 / 36677329 (0.558667)
+[2024-05-30 12:22:10] INFO: Median overlap divergence: 0.256617
+[2024-05-30 12:22:10] INFO: Mean edge coverage: 7
+[2024-05-30 12:22:10] INFO: Simplifying the graph
+[2024-05-30 12:22:14] INFO: >>>STAGE: contigger
+[2024-05-30 12:22:14] INFO: Generating contigs
+[2024-05-30 12:22:14] INFO: Reading sequences
+[2024-05-30 12:22:16] INFO: Generated 99 contigs
+[2024-05-30 12:22:16] INFO: Added 2 scaffold connections
+[2024-05-30 12:22:18] INFO: >>>STAGE: polishing
+[2024-05-30 12:22:18] INFO: Polishing genome (1/1)
+[2024-05-30 12:22:18] INFO: Running minimap2
+[2024-05-30 12:25:38] INFO: Separating alignment into bubbles
+[2024-05-30 12:25:41] INFO: Alignment error rate: 0.382776
+[2024-05-30 12:25:41] INFO: Correcting bubbles
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:40:49] INFO: >>>STAGE: finalize
+[2024-05-30 12:40:55] INFO: Assembly statistics:
+
+	Total length:	1404601
+	Fragments:	76
+	Fragments N50:	37843
+	Largest frg:	195349
+	Scaffolds:	0
+	Mean coverage:	13
+
+[2024-05-30 12:40:55] INFO: Final assembly: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/FarmA/assembly.fasta
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-30 12:41:01] INFO: Starting Flye 2.9.4-b1799
+[2024-05-30 12:41:02] INFO: >>>STAGE: configure
+[2024-05-30 12:41:02] INFO: Configuring run
+[2024-05-30 12:41:03] INFO: Total read length: 33447368
+[2024-05-30 12:41:03] INFO: Reads N50/N90: 22899 / 104
+[2024-05-30 12:41:03] INFO: Minimum overlap set to 1000
+[2024-05-30 12:41:03] INFO: >>>STAGE: assembly
+[2024-05-30 12:41:04] INFO: Assembling disjointigs
+[2024-05-30 12:41:04] INFO: Reading sequences
+[2024-05-30 12:41:07] INFO: Counting k-mers:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:42:15] INFO: Filling index table (1/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:42:17] INFO: Filling index table (2/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 12:44:36] INFO: Extending reads
+[2024-05-30 13:14:25] INFO: Overlap-based coverage: 6
+[2024-05-30 13:14:26] INFO: Median overlap divergence: 0.305403
+0% 30% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:16:21] INFO: Assembled 112 disjointigs
+[2024-05-30 13:16:21] INFO: Generating sequence
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:16:22] INFO: Filtering contained disjointigs
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:16:34] INFO: Contained seqs: 12
+[2024-05-30 13:16:35] INFO: >>>STAGE: consensus
+[2024-05-30 13:16:35] INFO: Running Minimap2
+[2024-05-30 13:19:25] INFO: Computing consensus
+[2024-05-30 13:19:27] INFO: Alignment error rate: 0.356148
+[2024-05-30 13:19:27] INFO: >>>STAGE: repeat
+[2024-05-30 13:19:27] INFO: Building and resolving repeat graph
+[2024-05-30 13:19:27] INFO: Parsing disjointigs
+[2024-05-30 13:19:27] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:22:21] INFO: Median overlap divergence: 0.368489
+[2024-05-30 13:22:21] INFO: Parsing reads
+[2024-05-30 13:22:22] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:23:05] INFO: Aligned read sequence: 15243074 / 24590710 (0.619871)
+[2024-05-30 13:23:05] INFO: Median overlap divergence: 0.244432
+[2024-05-30 13:23:05] INFO: Mean edge coverage: 6
+[2024-05-30 13:23:05] INFO: Simplifying the graph
+[2024-05-30 13:23:06] INFO: >>>STAGE: contigger
+[2024-05-30 13:23:06] INFO: Generating contigs
+[2024-05-30 13:23:06] INFO: Reading sequences
+[2024-05-30 13:23:07] INFO: Generated 72 contigs
+[2024-05-30 13:23:07] INFO: Added 1 scaffold connections
+[2024-05-30 13:23:07] INFO: >>>STAGE: polishing
+[2024-05-30 13:23:07] INFO: Polishing genome (1/1)
+[2024-05-30 13:23:07] INFO: Running minimap2
+[2024-05-30 13:25:13] INFO: Separating alignment into bubbles
+[2024-05-30 13:25:16] INFO: Alignment error rate: 0.385506
+[2024-05-30 13:25:16] INFO: Correcting bubbles
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:38:19] INFO: >>>STAGE: finalize
+[2024-05-30 13:38:19] INFO: Assembly statistics:
+
+	Total length:	1042304
+	Fragments:	48
+	Fragments N50:	45179
+	Largest frg:	103745
+	Scaffolds:	0
+	Mean coverage:	12
+
+[2024-05-30 13:38:19] INFO: Final assembly: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/FarmC/assembly.fasta
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-30 13:38:43] INFO: Starting Flye 2.9.4-b1799
+[2024-05-30 13:38:43] INFO: >>>STAGE: configure
+[2024-05-30 13:38:43] INFO: Configuring run
+[2024-05-30 13:38:43] INFO: Total read length: 25384990
+[2024-05-30 13:38:43] INFO: Reads N50/N90: 25848 / 84
+[2024-05-30 13:38:43] INFO: Minimum overlap set to 1000
+[2024-05-30 13:38:43] INFO: >>>STAGE: assembly
+[2024-05-30 13:38:43] INFO: Assembling disjointigs
+[2024-05-30 13:38:43] INFO: Reading sequences
+[2024-05-30 13:38:46] INFO: Counting k-mers:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:39:53] INFO: Filling index table (1/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:39:54] INFO: Filling index table (2/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:41:00] INFO: Extending reads
+[2024-05-30 13:53:55] INFO: Overlap-based coverage: 1
+[2024-05-30 13:53:55] INFO: Median overlap divergence: 0.308671
+0% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:55:02] INFO: Assembled 81 disjointigs
+[2024-05-30 13:55:02] INFO: Generating sequence
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:55:03] INFO: Filtering contained disjointigs
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:55:40] INFO: Contained seqs: 13
+[2024-05-30 13:55:40] INFO: >>>STAGE: consensus
+[2024-05-30 13:55:40] INFO: Running Minimap2
+[2024-05-30 13:57:08] INFO: Computing consensus
+[2024-05-30 13:57:10] INFO: Alignment error rate: 0.344434
+[2024-05-30 13:57:10] INFO: >>>STAGE: repeat
+[2024-05-30 13:57:10] INFO: Building and resolving repeat graph
+[2024-05-30 13:57:10] INFO: Parsing disjointigs
+[2024-05-30 13:57:10] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 13:59:28] INFO: Median overlap divergence: 0.394357
+[2024-05-30 13:59:28] INFO: Parsing reads
+[2024-05-30 13:59:28] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 14:03:32] INFO: Aligned read sequence: 10819995 / 16850497 (0.642117)
+[2024-05-30 14:03:32] INFO: Median overlap divergence: 0.242147
+[2024-05-30 14:03:32] INFO: Mean edge coverage: 7
+[2024-05-30 14:03:32] INFO: Simplifying the graph
+[2024-05-30 14:03:32] INFO: >>>STAGE: contigger
+[2024-05-30 14:03:32] INFO: Generating contigs
+[2024-05-30 14:03:32] INFO: Reading sequences
+[2024-05-30 14:03:33] INFO: Generated 52 contigs
+[2024-05-30 14:03:33] INFO: Added 0 scaffold connections
+[2024-05-30 14:03:33] INFO: >>>STAGE: polishing
+[2024-05-30 14:03:33] INFO: Polishing genome (1/1)
+[2024-05-30 14:03:33] INFO: Running minimap2
+[2024-05-30 14:05:39] INFO: Separating alignment into bubbles
+[2024-05-30 14:05:42] INFO: Alignment error rate: 0.400664
+[2024-05-30 14:05:42] INFO: Correcting bubbles
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 14:14:59] INFO: >>>STAGE: finalize
+[2024-05-30 14:14:59] INFO: Assembly statistics:
+
+	Total length:	744252
+	Fragments:	37
+	Fragments N50:	46118
+	Largest frg:	103165
+	Scaffolds:	0
+	Mean coverage:	12
+
+[2024-05-30 14:14:59] INFO: Final assembly: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/Blank/assembly.fasta
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+[2024-05-30 14:15:05] INFO: Starting Flye 2.9.4-b1799
+[2024-05-30 14:15:05] INFO: >>>STAGE: configure
+[2024-05-30 14:15:05] INFO: Configuring run
+[2024-05-30 14:15:14] INFO: Total read length: 686411014
+[2024-05-30 14:15:14] INFO: Reads N50/N90: 30627 / 1012
+[2024-05-30 14:15:14] INFO: Minimum overlap set to 1000
+[2024-05-30 14:15:14] INFO: >>>STAGE: assembly
+[2024-05-30 14:15:14] INFO: Assembling disjointigs
+[2024-05-30 14:15:14] INFO: Reading sequences
+[2024-05-30 14:15:23] INFO: Counting k-mers:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 14:18:54] INFO: Filling index table (1/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 14:20:59] INFO: Filling index table (2/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 14:23:47] INFO: Extending reads
+[2024-05-30 14:25:50] INFO: Overlap-based coverage: 0
+[2024-05-30 14:25:51] INFO: Median overlap divergence: 0.301759
+0% 

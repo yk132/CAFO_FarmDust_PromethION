@@ -1,0 +1,267 @@
+May-30 14:17:46.575 [main] DEBUG nextflow.cli.Launcher - $> nextflow run epi2me-labs/wf-metagenomics/main.nf -profile singularity -c ./nextflow.config --fastq /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Blanks_pooled.fastq.gz --database_set ncbi_16s_18s_28s_ITS --classifier minimap2 --threads 32 --out_dir /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_blank_wf_metagenomics --min_len 50 --store_dir /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db
+May-30 14:17:46.700 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.04.3
+May-30 14:17:46.740 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/hpc/home/yk132/.nextflow/plugins; core-plugins: nf-amazon@1.16.2,nf-azure@1.0.1,nf-codecommit@0.1.4,nf-console@1.0.5,nf-ga4gh@1.0.5,nf-google@1.7.3,nf-tower@1.5.12,nf-wave@0.8.4
+May-30 14:17:46.798 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-30 14:17:46.799 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-30 14:17:46.802 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-30 14:17:46.819 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-30 14:17:46.987 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /hpc/home/yk132/.nextflow/scm
+May-30 14:17:48.092 [main] DEBUG nextflow.scm.AssetManager - Git config: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/.git/config; branch: master; remote: origin; url: https://github.com/epi2me-labs/wf-metagenomics.git
+May-30 14:17:48.111 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+May-30 14:17:48.157 [main] DEBUG nextflow.scm.AssetManager - Git config: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/.git/config; branch: master; remote: origin; url: https://github.com/epi2me-labs/wf-metagenomics.git
+May-30 14:17:50.935 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config
+May-30 14:17:50.936 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config
+May-30 14:17:50.939 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/./nextflow.config
+May-30 14:17:50.939 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config
+May-30 14:17:50.939 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config
+May-30 14:17:50.939 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config
+May-30 14:17:50.953 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+May-30 14:17:51.126 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+May-30 14:17:51.148 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+May-30 14:17:51.152 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, conda, singularity, awsbatch, local]
+May-30 14:17:51.207 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+May-30 14:17:51.208 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/epi2me-labs/wf-metagenomics` [jovial_lorenz] DSL2 - revision: b12d893856 [master]
+May-30 14:17:51.208 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-30 14:17:51.208 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+May-30 14:17:51.214 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /hpc/home/yk132/.nextflow/secrets/store.json
+May-30 14:17:51.218 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@687389a6] - activable => nextflow.secret.LocalSecretsProvider@687389a6
+May-30 14:17:51.357 [main] DEBUG nextflow.Session - Session UUID: 4c8934bf-cdbb-4a95-a31f-3ac55d90ad73
+May-30 14:17:51.358 [main] DEBUG nextflow.Session - Run name: jovial_lorenz
+May-30 14:17:51.358 [main] DEBUG nextflow.Session - Executor pool size: 32
+May-30 14:17:51.376 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+May-30 14:17:51.444 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.04.3 build 5875
+  Created: 11-08-2023 18:37 UTC (14:37 EDT)
+  System: Linux 5.14.0-362.8.1.el9_3.x86_64
+  Runtime: Groovy 3.0.16 on OpenJDK 64-Bit Server VM 11.0.13+7-b1751.21
+  Encoding: UTF-8 (UTF-8)
+  Process: 1574990@dcc-chsi-13 [10.183.19.76]
+  CPUs: 32 - Mem: 630 GB (430.8 GB) - Swap: 3.9 GB (3.9 GB)
+May-30 14:17:51.594 [main] DEBUG nextflow.Session - Work-dir: /work/yk132/CAFO_Nanopore_work/nf_working [nfs]
+May-30 14:17:51.628 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-30 14:17:51.644 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-30 14:17:51.847 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+May-30 14:17:51.972 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+May-30 14:17:52.530 [main] DEBUG nextflow.Session - Session start
+May-30 14:17:52.540 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job4_blank_wf_metagenomics/execution/trace.txt
+May-30 14:17:52.607 [main] DEBUG nextflow.Session - Using default localLib path: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/lib
+May-30 14:17:52.615 [main] DEBUG nextflow.Session - Adding to the classpath library: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/lib
+May-30 14:17:52.616 [main] DEBUG nextflow.Session - Adding to the classpath library: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/lib/nfcore_external_java_deps.jar
+May-30 14:17:54.213 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-30 14:17:59.923 [main] WARN  nextflow.NextflowMeta$Preview - NEXTFLOW RECURSION IS A PREVIEW FEATURE - SYNTAX AND FUNCTIONALITY CAN CHANGE IN FUTURE RELEASES
+May-30 14:18:00.260 [main] INFO  nextflow.Nextflow - 
+[0;92m||||||||||   [0m[2m_____ ____ ___ ____  __  __ _____      _       _
+[0;92m||||||||||  [0m[2m| ____|  _ \_ _|___ \|  \/  | ____|    | | __ _| |__  ___
+[0;33m|||||       [0m[2m|  _| | |_) | |  __) | |\/| |  _| _____| |/ _` | '_ \/ __|
+[0;33m|||||       [0m[2m| |___|  __/| | / __/| |  | | |__|_____| | (_| | |_) \__ \
+[0;94m||||||||||  [0m[2m|_____|_|  |___|_____|_|  |_|_____|    |_|\__,_|_.__/|___/
+[0;94m||||||||||  [0m[1mwf-metagenomics v2.9.4-gb12d893[0m
+[2m--------------------------------------------------------------------------------[0m
+[1mCore Nextflow options[0m
+  [0;34mrevision       : [0;32mmaster[0m
+  [0;34mrunName        : [0;32mjovial_lorenz[0m
+  [0;34mcontainerEngine: [0;32msingularity[0m
+  [0;34mlaunchDir      : [0;32m/hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION[0m
+  [0;34mworkDir        : [0;32m/work/yk132/CAFO_Nanopore_work/nf_working[0m
+  [0;34mprojectDir     : [0;32m/hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics[0m
+  [0;34muserName       : [0;32myk132[0m
+  [0;34mprofile        : [0;32msingularity[0m
+  [0;34mconfigFiles    : [0;32m/hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/./nextflow.config[0m
+
+[1mInput Options[0m
+  [0;34mfastq          : [0;32m/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Blanks_pooled.fastq.gz[0m
+  [0;34mclassifier     : [0;32mminimap2[0m
+
+[1mReference Options[0m
+  [0;34mdatabase_set   : [0;32mncbi_16s_18s_28s_ITS[0m
+  [0;34mstore_dir      : [0;32m/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db[0m
+  [0;34mdatabase_sets  : [0;32m[ncbi_16s_18s:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_16s_18s.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ref2taxid.targloci.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], ncbi_16s_18s_28s_ITS:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], SILVA_138_1:[database:null], Standard-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08gb_20231009.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPF-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPFP-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip]][0m
+
+[1mOutput Options[0m
+  [0;34mout_dir        : [0;32m/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_blank_wf_metagenomics[0m
+
+[1mAdvanced Options[0m
+  [0;34mmin_len        : [0;32m50[0m
+  [0;34mthreads        : [0;32m32[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+[2m--------------------------------------------------------------------------------[0m
+If you use epi2me-labs/wf-metagenomics for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+
+[2m--------------------------------------------------------------------------------[0m
+This is epi2me-labs/wf-metagenomics v2.9.4-gb12d893.
+[2m--------------------------------------------------------------------------------[0m
+May-30 14:18:00.871 [main] INFO  nextflow.Nextflow - Checking inputs.
+May-30 14:18:00.955 [main] INFO  nextflow.Nextflow - Searching input for [.fastq, .fastq.gz, .fq, .fq.gz] files.
+May-30 14:18:01.278 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wf_common` matches labels `ingress,wf_common` for process with name fastcat
+May-30 14:18:01.285 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.285 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.334 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+May-30 14:18:01.342 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+May-30 14:18:01.462 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+May-30 14:18:01.600 [main] INFO  nextflow.Nextflow - Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+May-30 14:18:01.605 [main] INFO  nextflow.Nextflow - Minimap2 pipeline.
+May-30 14:18:01.605 [main] INFO  nextflow.Nextflow - Preparing databases.
+May-30 14:18:01.606 [main] INFO  nextflow.Nextflow - Using default taxonomy database.
+May-30 14:18:01.613 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name prepare_databases:download_unpack_taxonomy
+May-30 14:18:01.614 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.616 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.623 [main] INFO  nextflow.Nextflow - Using a default database.
+May-30 14:18:01.634 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name prepare_databases:download_reference_ref2taxid
+May-30 14:18:01.637 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.637 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.704 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name minimap_pipeline:run_common:getVersions
+May-30 14:18:01.704 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.704 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.708 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name minimap_pipeline:run_common:getParams
+May-30 14:18:01.708 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.708 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.731 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name minimap_pipeline:minimap
+May-30 14:18:01.733 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.733 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.749 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name minimap_pipeline:createAbundanceTables
+May-30 14:18:01.749 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.749 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.763 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wf_common` matches labels `wf_common` for process with name minimap_pipeline:makeReport
+May-30 14:18:01.764 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.764 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.778 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name minimap_pipeline:output_results
+May-30 14:18:01.778 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-30 14:18:01.778 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-30 14:18:01.780 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: move_or_compress_fq_file, download_unpack_taxonomy, kraken_server, bamToFastq, getAlignmentStats, checkBamHeaders, prepare_databases:download_reference_ref2taxid, mergeBams, output, stop_kraken_server, output_kraken2_read_assignments, abricate, makeReport, getVersions, extractMinimap2Reads, rebatchFastq, validateIndex, output_results, minimap_pipeline:createAbundanceTables, minimap_pipeline:makeReport, bamstats, run_kraken2, fastcat, download_reference_ref2taxid, samtools_index, getParams, abricate_json, concatAssignments, sortBam, minimap_pipeline:run_common:getParams, validate_sample_sheet, createAbundanceTables, progressive_stats, progressive_amr, minimap, check_reference_ref2taxid, kraken2_client, prepareSILVA, prepare_databases:download_unpack_taxonomy, progressive_bracken, minimap_pipeline:minimap, minimap_pipeline:output_results, determine_bracken_length, progressive_kraken_reports, unpack_download_kraken2_database, stopCondition, minimap_pipeline:run_common:getVersions, abricateVersion, exclude_host_reads, run_bracken, catSortBams
+May-30 14:18:01.783 [main] DEBUG nextflow.Session - Igniting dataflow network (14)
+May-30 14:18:01.784 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastcat
+May-30 14:18:01.785 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prepare_databases:download_unpack_taxonomy
+May-30 14:18:01.785 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prepare_databases:download_reference_ref2taxid
+May-30 14:18:01.786 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap_pipeline:run_common:getVersions
+May-30 14:18:01.786 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap_pipeline:run_common:getParams
+May-30 14:18:01.787 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap_pipeline:minimap
+May-30 14:18:01.789 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap_pipeline:createAbundanceTables
+May-30 14:18:01.791 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap_pipeline:makeReport
+May-30 14:18:01.792 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap_pipeline:output_results
+May-30 14:18:01.793 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+May-30 14:18:01.793 [main] DEBUG nextflow.Session - Session await
+May-30 14:18:02.067 [Actor Thread 21] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://ontresearch/wf-metagenomics:sha44a6dacff5f2001d917b774647bb4cbc1b53bc76; path=/work/yk132/.singularity/cache/ontresearch-wf-metagenomics-sha44a6dacff5f2001d917b774647bb4cbc1b53bc76.img
+May-30 14:18:02.067 [Actor Thread 22] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://ontresearch/wf-common:sha645176f98b8780851f9c476a064d44c2ae76ddf6; path=/work/yk132/.singularity/cache/ontresearch-wf-common-sha645176f98b8780851f9c476a064d44c2ae76ddf6.img
+May-30 14:18:02.236 [Actor Thread 24] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/data/OPTIONAL_FILE
+May-30 14:18:02.614 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process fastcat (1) > jobId: 10042942; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/c3/95b64d6bebcc5d689e969eec66b492
+May-30 14:18:02.615 [Task submitter] INFO  nextflow.Session - [c3/95b64d] Submitted process > fastcat (1)
+May-30 14:18:02.822 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process minimap_pipeline:run_common:getParams > jobId: 10042943; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/da/90c8dd79b99d128fdacc0619c72bc2
+May-30 14:18:02.823 [Task submitter] INFO  nextflow.Session - [da/90c8dd] Submitted process > minimap_pipeline:run_common:getParams
+May-30 14:18:02.928 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prepare_databases:download_reference_ref2taxid > jobId: 10042944; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/7f/5d2fb51cf527e229e57a29078258b8
+May-30 14:18:02.929 [Task submitter] INFO  nextflow.Session - [7f/5d2fb5] Submitted process > prepare_databases:download_reference_ref2taxid
+May-30 14:18:03.081 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process minimap_pipeline:run_common:getVersions > jobId: 10042945; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/e9/a9d1682db1f20eacb266062799a187
+May-30 14:18:03.081 [Task submitter] INFO  nextflow.Session - [e9/a9d168] Submitted process > minimap_pipeline:run_common:getVersions
+May-30 14:18:03.195 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prepare_databases:download_unpack_taxonomy > jobId: 10042946; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/76/cd8847a2a2989aba318ea39a7378f6
+May-30 14:18:03.196 [Task submitter] INFO  nextflow.Session - [76/cd8847] Submitted process > prepare_databases:download_unpack_taxonomy
+May-30 14:18:41.485 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 10042942; id: 2; name: fastcat (1); status: COMPLETED; exit: 0; error: -; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/c3/95b64d6bebcc5d689e969eec66b492 started: 1717093086476; exited: 2024-05-30T18:18:24.211618Z; ]
+May-30 14:18:41.541 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 10042943; id: 4; name: minimap_pipeline:run_common:getParams; status: COMPLETED; exit: 0; error: -; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/da/90c8dd79b99d128fdacc0619c72bc2 started: 1717093086709; exited: 2024-05-30T18:18:06.818651Z; ]
+May-30 14:18:41.556 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 10042944; id: 1; name: prepare_databases:download_reference_ref2taxid; status: COMPLETED; exit: 0; error: -; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/7f/5d2fb51cf527e229e57a29078258b8 started: 1717093086712; exited: 2024-05-30T18:18:14.520558Z; ]
+May-30 14:18:41.620 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process `prepare_databases:download_reference_ref2taxid` is unable to find [UnixPath]: `/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.fna` (pattern: `ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.fna`)
+May-30 14:18:41.736 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process minimap_pipeline:output_results (1) > jobId: 10042964; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/94/12ea33bf8a9a2de078afaf7b799a6a
+May-30 14:18:41.737 [Task submitter] INFO  nextflow.Session - [94/12ea33] Submitted process > minimap_pipeline:output_results (1)
+May-30 14:18:41.745 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=prepare_databases:download_reference_ref2taxid; work-dir=/work/yk132/CAFO_Nanopore_work/nf_working/7f/5d2fb51cf527e229e57a29078258b8
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.fna` expected by process `prepare_databases:download_reference_ref2taxid`
+May-30 14:18:41.958 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'prepare_databases:download_reference_ref2taxid'
+
+Caused by:
+  Missing output file(s) `ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.fna` expected by process `prepare_databases:download_reference_ref2taxid`
+
+Command executed:
+
+  wget 'https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna'
+  wget 'https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv'
+  mkdir ncbi_16s_18s_28s_ITS_db
+  mv "ncbi_16s_18s_28s_ITS.fna" ncbi_16s_18s_28s_ITS_db/
+  mv "ref2taxid.ncbi_16s_18s_28s_ITS.tsv" ncbi_16s_18s_28s_ITS_db/
+
+Command exit status:
+  0
+
+Command output:
+  (empty)
+
+Command error:
+   65250K .......... .......... .......... .......... .......... 98% 3.66M 0s
+   65300K .......... .......... .......... .......... .......... 98% 29.1M 0s
+   65350K .......... .......... .......... .......... .......... 99% 29.7M 0s
+   65400K .......... .......... .......... .......... .......... 99% 44.7M 0s
+   65450K .......... .......... .......... .......... .......... 99% 63.6M 0s
+   65500K .......... .......... .......... .......... .......... 99% 63.1M 0s
+   65550K .......... .......... .......... .......... .......... 99% 64.4M 0s
+   65600K .......... .......... .......... .......... .......... 99% 55.9M 0s
+   65650K .......... .......... .......... .......... .......... 99% 64.1M 0s
+   65700K .......... .......... .......... .......... .......... 99% 63.6M 0s
+   65750K .......... .......... .......... .......... .......... 99% 62.3M 0s
+   65800K .......... .......... .......... .......... .......... 99% 7.97M 0s
+   65850K .......... .......... .......... .......... .......... 99% 56.5M 0s
+   65900K .......... .......... .......... .......... .......... 99%  115M 0s
+   65950K .......... .......... .......... .......... .......... 99%  230M 0s
+   66000K .......... ..                                         100%  153M=3.2s
+  
+  2024-05-30 14:18:11 (20.2 MB/s) - 'ncbi_16s_18s_28s_ITS.fna' saved [67596916/67596916]
+  
+  --2024-05-30 14:18:11--  https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv
+  Resolving ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com (ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com)... 52.218.120.153, 52.218.56.242, 52.92.33.121, ...
+  Connecting to ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com (ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com)|52.218.120.153|:443... connected.
+  HTTP request sent, awaiting response... 200 OK
+  Length: 1068210 (1.0M) [text/tab-separated-values]
+  Saving to: 'ref2taxid.ncbi_16s_18s_28s_ITS.tsv'
+  
+       0K .......... .......... .......... .......... ..........  4%  488K 2s
+      50K .......... .......... .......... .......... ..........  9%  244K 3s
+     100K .......... .......... .......... .......... .......... 14%  489K 2s
+     150K .......... .......... .......... .......... .......... 19%  487K 2s
+     200K .......... .......... .......... .......... .......... 23%  487K 2s
+     250K .......... .......... .......... .......... .......... 28% 75.5M 2s
+     300K .......... .......... .......... .......... .......... 33%  488K 1s
+     350K .......... .......... .......... .......... .......... 38%  489K 1s
+     400K .......... .......... .......... .......... .......... 43% 82.3M 1s
+     450K .......... .......... .......... .......... .......... 47%  482K 1s
+     500K .......... .......... .......... .......... .......... 52%  490K 1s
+     550K .......... .......... .......... .......... .......... 57% 26.1M 1s
+     600K .......... .......... .......... .......... .......... 62%  491K 1s
+     650K .......... .......... .......... .......... .......... 67%  491K 1s
+     700K .......... .......... .......... .......... .......... 71% 43.7M 0s
+     750K .......... .......... .......... .......... .......... 76%  489K 0s
+     800K .......... .......... .......... .......... .......... 81% 1.24M 0s
+     850K .......... .......... .......... .......... .......... 86%  778K 0s
+     900K .......... .......... .......... .......... .......... 91% 1.25M 0s
+     950K .......... .......... .......... .......... .......... 95%  776K 0s
+    1000K .......... .......... .......... .......... ...       100%  426K=1.6s
+  
+  2024-05-30 14:18:13 (635 KB/s) - 'ref2taxid.ncbi_16s_18s_28s_ITS.tsv' saved [1068210/1068210]
+
+Work dir:
+  /work/yk132/CAFO_Nanopore_work/nf_working/7f/5d2fb51cf527e229e57a29078258b8
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+May-30 14:18:41.964 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `ncbi_16s_18s_28s_ITS_db/ncbi_16s_18s_28s_ITS.fna` expected by process `prepare_databases:download_reference_ref2taxid`
+May-30 14:18:42.038 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] minimap_pipeline:output_results
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+May-30 14:18:42.540 [main] DEBUG nextflow.Session - Session await > all processes finished
+May-30 14:18:42.543 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-30 14:18:42.553 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 10042945; id: 3; name: minimap_pipeline:run_common:getVersions; status: COMPLETED; exit: 0; error: -; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/e9/a9d1682db1f20eacb266062799a187 started: 1717093086715; exited: 2024-05-30T18:18:18.715674Z; ]
+May-30 14:18:42.568 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 10042946; id: 5; name: prepare_databases:download_unpack_taxonomy; status: COMPLETED; exit: 0; error: -; workDir: /work/yk132/CAFO_Nanopore_work/nf_working/76/cd8847a2a2989aba318ea39a7378f6 started: 1717093086718; exited: 2024-05-30T18:18:14.904181Z; ]
+May-30 14:18:42.570 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process `prepare_databases:download_unpack_taxonomy` is unable to find [UnixPath]: `/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job4_Minimap2_db/ncbi_16s_18s_28s_ITS/taxdmp_2023-01-01_db` (pattern: `taxdmp_2023-01-01_db`)
+May-30 14:18:42.570 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=prepare_databases:download_unpack_taxonomy; work-dir=/work/yk132/CAFO_Nanopore_work/nf_working/76/cd8847a2a2989aba318ea39a7378f6
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `taxdmp_2023-01-01_db` expected by process `prepare_databases:download_unpack_taxonomy`
+May-30 14:18:42.679 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+May-30 14:18:42.871 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=2; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=1; runningCount=-1; retriesCount=0; abortedCount=1; succeedDuration=24.9s; failedDuration=13.2s; cachedDuration=0ms;loadCpus=-1; loadMemory=0; peakRunning=5; peakCpus=7; peakMemory=10 GB; ]
+May-30 14:18:42.872 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+May-30 14:18:42.936 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+May-30 14:18:43.020 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":23.33,"min":23.33,"q1":23.33,"q2":23.33,"q3":23.33,"max":23.33,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"process":"fastcat","mem":{"mean":95731712,"min":95731712,"q1":95731712,"q2":95731712,"q3":95731712,"max":95731712,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"memUsage":{"mean":4.46,"min":4.46,"q1":4.46,"q2":4.46,"q3":4.46,"max":4.46,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"timeUsage":null,"vmem":{"mean":1527255040,"min":1527255040,"q1":1527255040,"q2":1527255040,"q3":1527255040,"max":1527255040,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"reads":{"mean":73893470,"min":73893470,"q1":73893470,"q2":73893470,"q3":73893470,"max":73893470,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"cpu":{"mean":70,"min":70,"q1":70,"q2":70,"q3":70,"max":70,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"time":{"mean":4242,"min":4242,"q1":4242,"q2":4242,"q3":4242,"max":4242,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"writes":{"mean":74178115,"min":74178115,"q1":74178115,"q2":74178115,"q3":74178115,"max":74178115,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"}},{"cpuUsage":{"mean":20.2,"min":20.2,"q1":20.2,"q2":20.2,"q3":20.2,"max":20.2,"minLabel":"minimap_pipeline:run_common:getParams","maxLabel":"minimap_pipeline:run_common:getParams","q1Label":"minimap_pipeline:run_common:getParams","q2Label":"minimap_pipeline:run_common:getParams","q3Label":"minimap_pipeline:run_common:getParams"},"process":"getParams","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":{"mean":424087,"min":424087,"q1":424087,"q2":424087,"q3":424087,"max":424087,"minLabel":"minimap_pipeline:run_common:getParams","maxLabel":"minimap_pipeline:run_common:getParams","q1Label":"minimap_pipeline:run_common:getParams","q2Label":"minimap_pipeline:run_common:getParams","q3Label":"minimap_pipeline:run_common:getParams"},"cpu":{"mean":20.2,"min":20.2,"q1":20.2,"q2":20.2,"q3":20.2,"max":20.2,"minLabel":"minimap_pipeline:run_common:getParams","maxLabel":"minimap_pipeline:run_common:getParams","q1Label":"minimap_pipeline:run_common:getParams","q2Label":"minimap_pipeline:run_common:getParams","q3Label":"minimap_pipeline:run_common:getParams"},"time":{"mean":23,"min":23,"q1":23,"q2":23,"q3":23,"max":23,"minLabel":"minimap_pipeline:run_common:getParams","maxLabel":"minimap_pipeline:run_common:getParams","q1Label":"minimap_pipeline:run_common:getParams","q2Label":"minimap_pipeline:run_common:getParams","q3Label":"minimap_pipeline:run_common:getParams"},"writes":{"mean":4545,"min":4545,"q1":4545,"q2":4545,"q3":4545,"max":4545,"minLabel":"minimap_pipeline:run_common:getParams","maxLabel":"minimap_pipeline:run_common:getParams","q1Label":"minimap_pipeline:run_common:getParams","q2Label":"minimap_pipeline:run_common:getParams","q3Label":"minimap_pipeline:run_common:getParams"}},{"cpuUsage":{"mean":10,"min":10,"q1":10,"q2":10,"q3":10,"max":10,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"},"process":"download_reference_ref2taxid","mem":{"mean":9015296,"min":9015296,"q1":9015296,"q2":9015296,"q3":9015296,"max":9015296,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"},"memUsage":{"mean":0.42,"min":0.42,"q1":0.42,"q2":0.42,"q3":0.42,"max":0.42,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"},"timeUsage":null,"vmem":{"mean":14086144,"min":14086144,"q1":14086144,"q2":14086144,"q3":14086144,"max":14086144,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"},"reads":{"mean":70150085,"min":70150085,"q1":70150085,"q2":70150085,"q3":70150085,"max":70150085,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"},"cpu":{"mean":10,"min":10,"q1":10,"q2":10,"q3":10,"max":10,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"},"time":{"mean":7209,"min":7209,"q1":7209,"q2":7209,"q3":7209,"max":7209,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"},"writes":{"mean":68770390,"min":68770390,"q1":68770390,"q2":68770390,"q3":68770390,"max":68770390,"minLabel":"prepare_databases:download_reference_ref2taxid","maxLabel":"prepare_databases:download_reference_ref2taxid","q1Label":"prepare_databases:download_reference_ref2taxid","q2Label":"prepare_databases:download_reference_ref2taxid","q3Label":"prepare_databases:download_reference_ref2taxid"}},{"cpuUsage":{"mean":30.7,"min":30.7,"q1":30.7,"q2":30.7,"q3":30.7,"max":30.7,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"},"process":"getVersions","mem":{"mean":69021696,"min":69021696,"q1":69021696,"q2":69021696,"q3":69021696,"max":69021696,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"},"memUsage":{"mean":3.21,"min":3.21,"q1":3.21,"q2":3.21,"q3":3.21,"max":3.21,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"},"timeUsage":null,"vmem":{"mean":125706240,"min":125706240,"q1":125706240,"q2":125706240,"q3":125706240,"max":125706240,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"},"reads":{"mean":38233466,"min":38233466,"q1":38233466,"q2":38233466,"q3":38233466,"max":38233466,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"},"cpu":{"mean":30.7,"min":30.7,"q1":30.7,"q2":30.7,"q3":30.7,"max":30.7,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"},"time":{"mean":12134,"min":12134,"q1":12134,"q2":12134,"q3":12134,"max":12134,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"},"writes":{"mean":3127,"min":3127,"q1":3127,"q2":3127,"q3":3127,"max":3127,"minLabel":"minimap_pipeline:run_common:getVersions","maxLabel":"minimap_pipeline:run_common:getVersions","q1Label":"minimap_pipeline:run_common:getVersions","q2Label":"minimap_pipeline:run_common:getVersions","q3Label":"minimap_pipeline:run_common:getVersions"}},{"cpuUsage":{"mean":49.6,"min":49.6,"q1":49.6,"q2":49.6,"q3":49.6,"max":49.6,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"},"process":"download_unpack_taxonomy","mem":{"mean":8966144,"min":8966144,"q1":8966144,"q2":8966144,"q3":8966144,"max":8966144,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"},"memUsage":{"mean":0.42,"min":0.42,"q1":0.42,"q2":0.42,"q3":0.42,"max":0.42,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"},"timeUsage":null,"vmem":{"mean":14082048,"min":14082048,"q1":14082048,"q2":14082048,"q3":14082048,"max":14082048,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"},"reads":{"mean":121651852,"min":121651852,"q1":121651852,"q2":121651852,"q3":121651852,"max":121651852,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"},"cpu":{"mean":49.6,"min":49.6,"q1":49.6,"q2":49.6,"q3":49.6,"max":49.6,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"},"time":{"mean":5985,"min":5985,"q1":5985,"q2":5985,"q3":5985,"max":5985,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"},"writes":{"mean":482522917,"min":482522917,"q1":482522917,"q2":482522917,"q3":482522917,"max":482522917,"minLabel":"prepare_databases:download_unpack_taxonomy","maxLabel":"prepare_databases:download_unpack_taxonomy","q1Label":"prepare_databases:download_unpack_taxonomy","q2Label":"prepare_databases:download_unpack_taxonomy","q3Label":"prepare_databases:download_unpack_taxonomy"}},{"cpuUsage":null,"process":"output_results","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}]
+May-30 14:18:44.160 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+May-30 14:18:44.635 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+May-30 14:18:45.726 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
