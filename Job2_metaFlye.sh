@@ -15,14 +15,16 @@ export STORE_DIR="/hpc/home/yk132/storage"
 export CAFO_DIR="${STORE_DIR}/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/"
 export CAFO_GIT_DIR="${STORE_DIR}/CAFO_FarmDust_PromethION"
 export CAFO_RES_DIR="${CAFO_DIR}/CAFO_PromethION_output"
-export MERGE_RES_DIR="${CAFO_RES_DIR}/Job4_merge_qc_res"
-export FARM_A="${MERGE_RES_DIR}/Farm_A.fastq"
-export FARM_C="${MERGE_RES_DIR}/Farm_C.fastq"
-export FARM_BLANK="${MERGE_RES_DIR}/Blank.fastq"
-export FLYE_RES_DIR="${CAFO_RES_DIR}/Job5_flye_res"
+export DEMUX_RES_DIR="${CAFO_RES_DIR}/demux_simplex_filtered"
+export FARM_A="${DEMUX_RES_DIR}/Farm_A.fastq.gz"
+export FARM_C="${DEMUX_RES_DIR}/Farm_C.fastq.gz"
+export FARM_BLANK="${DEMUX_RES_DIR}/Blanks_pooled.fastq.gz"
+export UNCLASSIFIED="${DEMUX_RES_DIR}/unclassified.fastq.gz"
+export FLYE_RES_DIR="${CAFO_RES_DIR}/Job2_flye_res"
 export FLYE_A_DIR="${FLYE_RES_DIR}/FarmA"
 export FLYE_C_DIR="${FLYE_RES_DIR}/FarmC"
 export FLYE_BLANK_DIR="${FLYE_RES_DIR}/Blank"
+export FLYE_UNCLASSIFIED_DIR="${FLYE_RES_DIR}/Unclassified"
 export NTHREADS="32"
 #------------------------------
 
@@ -31,6 +33,7 @@ mkdir -p $FLYE_RES_DIR
 mkdir -p $FLYE_A_DIR
 mkdir -p $FLYE_C_DIR
 mkdir -p $FLYE_BLANK_DIR
+mkdir -p $FLYE_UNCLASSIFIED_DIR
 
 # Run metaFlye for Farm A
 singularity exec \
@@ -59,6 +62,16 @@ singularity exec \
         docker://staphb/flye:2.9.4 \
 	flye --nano-raw $FARM_BLANK \
  	-o $FLYE_BLANK_DIR \
+  	--meta \
+   	-t $NTHREADS 
+
+# Run metaFlye for unclassified
+singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://staphb/flye:2.9.4 \
+	flye --nano-raw $UNCLASSIFIED \
+ 	-o $FLYE_UNCLASSIFIED_DIR \
   	--meta \
    	-t $NTHREADS 
 
