@@ -10,24 +10,20 @@ set -u
 
 #-------------------------------
 export STORE_DIR="/hpc/home/yk132/storage"
-export CAFO_DIR="${STORE_DIR}/20230908_Dust_Redo_R9"
-export CAFO_GIT_DIR="${CAFO_DIR}/CAFO_Nanopore_clean"
-export WORK_DIR="/work/${USER}" # CHANGE ME if needed 
-export CAFO_WORK_DIR="${WORK_DIR}/CAFO_Nanopore_work"
-export OUTPUT_DIR="${CAFO_DIR}/Outputs"
+export CAFO_DIR="${STORE_DIR}/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/"
+export CAFO_GIT_DIR="${STORE_DIR}/CAFO_FarmDust_PromethION"
+export CAFO_RES_DIR="${CAFO_DIR}/CAFO_PromethION_output"
+export FLYE_RES_DIR="${CAFO_RES_DIR}/Job2_flye_res"
+export FLYE_A_DIR="${FLYE_RES_DIR}/FarmA"
+export FLYE_C_DIR="${FLYE_RES_DIR}/FarmC"
+export FLYE_BLANK_DIR="${FLYE_RES_DIR}/Blank"
+export FLYE_UNCLASSIFIED_DIR="${FLYE_RES_DIR}/Unclassified"
+
+# PICK UP HERE! 
 export QUAST_DIR="${OUTPUT_DIR}/Job6_quast"
 export QUAST_01="${QUAST_DIR}/barcode01"
 export QUAST_02="${QUAST_DIR}/barcode02"
 export SLURM_CPUS_PER_TASK="16" # CHANGE ME
-export MERGED_DIR="${OUTPUT_DIR}/Job4_merged_fastq"
-export BAR01_MERGED="${MERGED_DIR}/barcode01_merged.fastq"
-export BAR02_MERGED="${MERGED_DIR}/barcode02_merged.fastq"
-export ILAB_DIR="${STORE_DIR}/ILAB_Dust"
-export SPADES_OUTPUT="${OUTPUT_DIR}/Job5_metaSPAdes"
-export SPADES_1="${SPADES_OUTPUT}/barcode01"
-export SPADES_2="${SPADES_OUTPUT}/barcode02"
-export CONTIG_01="${SPADES_1}/contigs.fasta"
-export CONTIG_02="${SPADES_2}/contigs.fasta"
 #-------------------------------
 
 #-------------------------------
