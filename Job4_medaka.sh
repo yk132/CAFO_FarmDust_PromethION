@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
-#SBATCH --partition=chsi
-#SBATCH -A chsi
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=100G
-#SBATCH --mail-type=ALL
+
+#SBATCH --mem=20G
+#SBATCH --cpus-per-task=6
+# #SBATCH --partition=chsi-gpu
+# #SBATCH -A chsi
+# #SBATCH --ntasks=1
+# #SBATCH --gres=gpu:1
+
+# #SBATCH --exclusive
 
 set -u
+
 
 #-------------------------------
 export STORE_DIR="/hpc/home/yk132/storage"
@@ -23,58 +27,35 @@ export FARMA_ASSEMBLED="${FLYE_A_DIR}/assembly.fasta"
 export FARMC_ASSEMBLED="${FLYE_C_DIR}/assembly.fasta"
 export BLANK_ASSEMBLED="${FLYE_BLANK_DIR}/assembly.fasta"
 export UNCLASSIFIED_ASSEMBLED="${FLYE_UNCLASSIFIED_DIR}/assembly.fasta"
-# quast output
-export QUAST_RES_DIR="${CAFO_RES_DIR}/Job3_quast"
-export QUAST_FARMA="${QUAST_RES_DIR}/Farm_A"
-export QUAST_FARMC="${QUAST_RES_DIR}/Farm_C"
-export QUAST_BLANK="${QUAST_RES_DIR}/Blank"
-export QUAST_UNCLASSIFIED="${QUAST_RES_DIR}/Unclassified"
-
+# medaka output
+export MEDAKA_RES_DIR="${CAFO_RES_DIR}/Job4_medaka"
+export MEDAKA_FARMA="${QUAST_RES_DIR}/Farm_A"
+export MEDAKA_FARMC="${QUAST_RES_DIR}/Farm_C"
+export MEDAKA_BLANK="${QUAST_RES_DIR}/Blank"
+export MEDAKA_UNCLASSIFIED="${QUAST_RES_DIR}/Unclassified"
 #-------------------------------
 
-#-------------------------------
-echo $FARMA_ASSEMBLED
-echo $FARMC_ASSEMBLED
-echo $BLANK_ASSEMBLED
-echo $UNCLASSIFIED_ASSEMBLED
 
-mkdir -p $QUAST_RES_DIR
-mkdir -p $QUAST_FARMA
-mkdir -p $QUAST_FARMC
-mkdir -p $QUAST_BLANK
-mkdir -p $QUAST_UNCLASSIFIED
 #-------------------------------
+if [ -v SLURM_GPUS_ON_NODE ] && (( $SLURM_GPUS_ON_NODE >= 1 )); then
+  export DORADO_DEVICE="cuda:all" ;
+else 
+  export DORADO_DEVICE="cpu" ;
+fi
+echo $DORADO_DEVICE
+#-----------------------------
+
+mkdir -p $MEDAKA_RES_DIR
+mkdir -p $MEDAKA_FARMA
+mkdir -p $MEDAKA_FARMC
+mkdir -p $MEDAKA_BLANK
+mkdir -p $MEDAKA_UNCLASSIFIED
+
+# medaka docker pull nanozoo/medaka:1.11.3--ce388c3
 
 # Run Quast on assembled contigs
 singularity exec \
+	--nv \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
-        docker://staphb/quast:5.2.0 \
-        metaquast.py $FARMA_ASSEMBLED \
-	-t $NTHREADS \
-	-o $QUAST_FARMA
-
-singularity exec \
-	--bind /work:/work \
-	--bind /hpc/group:/hpc/group \
-        docker://staphb/quast:5.2.0 \
-        metaquast.py $FARMC_ASSEMBLED \
-	-t $NTHREADS \
-	-o $QUAST_FARMC
-
- singularity exec \
-	--bind /work:/work \
-	--bind /hpc/group:/hpc/group \
-        docker://staphb/quast:5.2.0 \
-        metaquast.py $BLANK_ASSEMBLED \
-	-t $NTHREADS \
-	-o $QUAST_BLANK
-
- singularity exec \
-	--bind /work:/work \
-	--bind /hpc/group:/hpc/group \
-        docker://staphb/quast:5.2.0 \
-        metaquast.py $UNCLASSIFIED_ASSEMBLED \
-	-t $NTHREADS \
-	-o $QUAST_UNCLASSIFIED
-
+        docker://nanozoo/medaka:1.11.3--ce388c3 \
