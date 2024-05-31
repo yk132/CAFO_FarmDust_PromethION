@@ -18,21 +18,31 @@ export FLYE_A_DIR="${FLYE_RES_DIR}/FarmA"
 export FLYE_C_DIR="${FLYE_RES_DIR}/FarmC"
 export FLYE_BLANK_DIR="${FLYE_RES_DIR}/Blank"
 export FLYE_UNCLASSIFIED_DIR="${FLYE_RES_DIR}/Unclassified"
+export NTHREADS="16"
+export FARMA_ASSEMBLED="${FLYE_A_DIR}/assembly.fasta"
+export FARMC_ASSEMBLED="${FLYE_C_DIR}/assembly.fasta"
+export BLANK_ASSEMBLED="${FLYE_BLANK_DIR}/assembly.fasta"
+export UNCLASSIFIED_ASSEMBLED="${FLYE_UNCLASSIFIED_DIR}/assembly.fasta"
+# quast output
+export QUAST_RES_DIR="${CAFO_RES_DIR}/Job3_quast"
+export QUAST_FARMA="${QUAST_RES_DIR}/Farm_A"
+export QUAST_FARMC="${QUAST_RES_DIR}/Farm_C"
+export QUAST_BLANK="${QUAST_RES_DIR}/Blank"
+export QUAST_UNCLASSIFIED="${QUAST_RES_DIR}/Unclassified"
 
-# PICK UP HERE! 
-export QUAST_DIR="${OUTPUT_DIR}/Job6_quast"
-export QUAST_01="${QUAST_DIR}/barcode01"
-export QUAST_02="${QUAST_DIR}/barcode02"
-export SLURM_CPUS_PER_TASK="16" # CHANGE ME
 #-------------------------------
 
 #-------------------------------
-echo $CONTIG_01
-echo $CONTIG_02
+echo $FARMA_ASSEMBLED
+echo $FARMC_ASSEMBLED
+echo $BLANK_ASSEMBLED
+echo $UNCLASSIFIED_ASSEMBLED
 
-mkdir -p $QUAST_DIR
-mkdir -p $QUAST_01
-mkdir -p $QUAST_02
+mkdir -p $QUAST_RES_DIR
+mkdir -p $QUAST_FARMA
+mkdir -p $QUAST_FARMC
+mkdir -p $QUAST_BLANK
+mkdir -p $QUAST_UNCLASSIFIED
 #-------------------------------
 
 # Run Quast on assembled contigs
@@ -40,15 +50,31 @@ singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/quast:5.2.0 \
-        metaquast.py $CONTIG_01 \
-	-t $SLURM_CPUS_PER_TASK \
-	-o $QUAST_01
+        metaquast.py $FARMA_ASSEMBLED \
+	-t $NTHREADS \
+	-o $QUAST_FARMA
 
 singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://staphb/quast:5.2.0 \
-        metaquast.py $CONTIG_02 \
-	-t $SLURM_CPUS_PER_TASK \
-	-o $QUAST_02
+        metaquast.py $FARMC_ASSEMBLED \
+	-t $NTHREADS \
+	-o $QUAST_FARMC
+
+ singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://staphb/quast:5.2.0 \
+        metaquast.py $BLANK_ASSEMBLED \
+	-t $NTHREADS \
+	-o $QUAST_BLANK
+
+ singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://staphb/quast:5.2.0 \
+        metaquast.py $UNCLASSIFIED_ASSEMBLED \
+	-t $NTHREADS \
+	-o $QUAST_UNCLASSIFIED
 
