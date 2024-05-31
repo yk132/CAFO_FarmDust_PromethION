@@ -1,0 +1,1427 @@
+Checking epi2me-labs/wf-metagenomics/ ...
+ Already-up-to-date - revision: b12d893856 [master]
+N E X T F L O W  ~  version 23.04.3
+Launching `https://github.com/epi2me-labs/wf-metagenomics` [mad_northcutt] DSL2 - revision: b12d893856 [master]
+WARN: NEXTFLOW RECURSION IS A PREVIEW FEATURE - SYNTAX AND FUNCTIONALITY CAN CHANGE IN FUTURE RELEASES
+
+||||||||||   _____ ____ ___ ____  __  __ _____      _       _
+||||||||||  | ____|  _ \_ _|___ \|  \/  | ____|    | | __ _| |__  ___
+|||||       |  _| | |_) | |  __) | |\/| |  _| _____| |/ _` | '_ \/ __|
+|||||       | |___|  __/| | / __/| |  | | |__|_____| | (_| | |_) \__ \
+||||||||||  |_____|_|  |___|_____|_|  |_|_____|    |_|\__,_|_.__/|___/
+||||||||||  wf-metagenomics v2.9.4-gb12d893
+--------------------------------------------------------------------------------
+Core Nextflow options
+  revision       : master
+  runName        : mad_northcutt
+  containerEngine: singularity
+  launchDir      : /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+  workDir        : /work/yk132/CAFO_Nanopore_work/nf_working
+  projectDir     : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics
+  userName       : yk132
+  profile        : singularity
+  configFiles    : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/./nextflow.config
+
+Input Options
+  bam            : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job5_minimap_res/farmA_alignment.bam
+  classifier     : minimap2
+
+Reference Options
+  database_set   : ncbi_16s_18s_28s_ITS
+  store_dir      : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db
+  database_sets  : [ncbi_16s_18s:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_16s_18s.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ref2taxid.targloci.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], ncbi_16s_18s_28s_ITS:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], SILVA_138_1:[database:null], Standard-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08gb_20231009.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPF-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPFP-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip]]
+
+Output Options
+  out_dir        : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job6_bam2tsv/farmA_tsv
+
+Advanced Options
+  min_len        : 50
+  threads        : 32
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+--------------------------------------------------------------------------------
+If you use epi2me-labs/wf-metagenomics for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+
+--------------------------------------------------------------------------------
+This is epi2me-labs/wf-metagenomics v2.9.4-gb12d893.
+--------------------------------------------------------------------------------
+Checking inputs.
+Searching input for [.bam, .ubam] files.
+[-        ] process > checkBamHeaders                -
+[-        ] process > bamToFastq                     -
+[-        ] process > prepare_databases:download_... -
+[-        ] process > prepare_databases:download_... -
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+
+[-        ] process > checkBamHeaders                -
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+[-        ] process > checkBamHeaders                [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (2)
+[-        ] process > checkBamHeaders                [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[5f/cde81a] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (3)
+[de/0a2bb8] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[5f/cde81a] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (3)
+[de/0a2bb8] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[5f/cde81a] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (3)
+[de/0a2bb8] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... [  0%] 0 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (4)
+[de/0a2bb8] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[22/f6a0ca] process > minimap_pipeline:output_res... [  0%] 0 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (4)
+[de/0a2bb8] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[22/f6a0ca] process > minimap_pipeline:output_res... [100%] 1 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (4)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[-        ] process > bamToFastq                     [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[22/f6a0ca] process > minimap_pipeline:output_res... [ 50%] 1 of 2
+
+
+
+
+
+
+
+
+executor >  slurm (5)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[-        ] process > bamToFastq                     [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [ 50%] 1 of 2
+
+
+
+
+
+
+
+
+executor >  slurm (6)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [ 50%] 1 of 2
+
+executor >  slurm (6)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (6)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (6)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:makeReport    -
+[ff/31ed65] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (9)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:makeReport    -
+[c7/8bb609] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (9)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:makeReport    [  0%] 0 of 1
+[c7/8bb609] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (10)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[11/acea17] process > minimap_pipeline:makeReport... [  0%] 0 of 1
+[c7/8bb609] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (10)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[11/acea17] process > minimap_pipeline:makeReport... [  0%] 0 of 1
+[c7/8bb609] process > minimap_pipeline:output_res... [100%] 3 of 3
+
+executor >  slurm (10)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[11/acea17] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[c7/8bb609] process > minimap_pipeline:output_res... [ 75%] 3 of 4
+
+executor >  slurm (11)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[11/acea17] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[d5/c5a085] process > minimap_pipeline:output_res... [ 75%] 3 of 4
+
+executor >  slurm (11)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[11/acea17] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[d5/c5a085] process > minimap_pipeline:output_res... [100%] 4 of 4 ✔
+
+executor >  slurm (11)
+[de/0a2bb8] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[53/420fb9] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[f3/30ce2c] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[5f/cde81a] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[73/d09de5] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[0a/bc7607] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[11/acea17] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[d5/c5a085] process > minimap_pipeline:output_res... [100%] 4 of 4 ✔
+Completed at: 30-May-2024 17:09:51
+Duration    : 4m 13s
+CPU hours   : 0.4
+Succeeded   : 11
+
+
+N E X T F L O W  ~  version 23.04.3
+Launching `https://github.com/epi2me-labs/wf-metagenomics` [mighty_borg] DSL2 - revision: b12d893856 [master]
+WARN: NEXTFLOW RECURSION IS A PREVIEW FEATURE - SYNTAX AND FUNCTIONALITY CAN CHANGE IN FUTURE RELEASES
+
+||||||||||   _____ ____ ___ ____  __  __ _____      _       _
+||||||||||  | ____|  _ \_ _|___ \|  \/  | ____|    | | __ _| |__  ___
+|||||       |  _| | |_) | |  __) | |\/| |  _| _____| |/ _` | '_ \/ __|
+|||||       | |___|  __/| | / __/| |  | | |__|_____| | (_| | |_) \__ \
+||||||||||  |_____|_|  |___|_____|_|  |_|_____|    |_|\__,_|_.__/|___/
+||||||||||  wf-metagenomics v2.9.4-gb12d893
+--------------------------------------------------------------------------------
+Core Nextflow options
+  revision       : master
+  runName        : mighty_borg
+  containerEngine: singularity
+  launchDir      : /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+  workDir        : /work/yk132/CAFO_Nanopore_work/nf_working
+  projectDir     : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics
+  userName       : yk132
+  profile        : singularity
+  configFiles    : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/./nextflow.config
+
+Input Options
+  bam            : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/demux_simplex_filtered/Farm_C.fastq.gz
+  classifier     : minimap2
+
+Reference Options
+  database_set   : ncbi_16s_18s_28s_ITS
+  store_dir      : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db
+  database_sets  : [ncbi_16s_18s:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_16s_18s.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ref2taxid.targloci.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], ncbi_16s_18s_28s_ITS:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], SILVA_138_1:[database:null], Standard-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08gb_20231009.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPF-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPFP-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip]]
+
+Output Options
+  out_dir        : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job6_bam2tsv/farmC_tsv
+
+Advanced Options
+  min_len        : 50
+  threads        : 32
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+--------------------------------------------------------------------------------
+If you use epi2me-labs/wf-metagenomics for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+
+--------------------------------------------------------------------------------
+This is epi2me-labs/wf-metagenomics v2.9.4-gb12d893.
+--------------------------------------------------------------------------------
+Checking inputs.
+Searching input for [.bam, .ubam] files.
+Input file is not of required file type.
+N E X T F L O W  ~  version 23.04.3
+Launching `https://github.com/epi2me-labs/wf-metagenomics` [pedantic_gauss] DSL2 - revision: b12d893856 [master]
+WARN: NEXTFLOW RECURSION IS A PREVIEW FEATURE - SYNTAX AND FUNCTIONALITY CAN CHANGE IN FUTURE RELEASES
+
+||||||||||   _____ ____ ___ ____  __  __ _____      _       _
+||||||||||  | ____|  _ \_ _|___ \|  \/  | ____|    | | __ _| |__  ___
+|||||       |  _| | |_) | |  __) | |\/| |  _| _____| |/ _` | '_ \/ __|
+|||||       | |___|  __/| | / __/| |  | | |__|_____| | (_| | |_) \__ \
+||||||||||  |_____|_|  |___|_____|_|  |_|_____|    |_|\__,_|_.__/|___/
+||||||||||  wf-metagenomics v2.9.4-gb12d893
+--------------------------------------------------------------------------------
+Core Nextflow options
+  revision       : master
+  runName        : pedantic_gauss
+  containerEngine: singularity
+  launchDir      : /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+  workDir        : /work/yk132/CAFO_Nanopore_work/nf_working
+  projectDir     : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics
+  userName       : yk132
+  profile        : singularity
+  configFiles    : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/./nextflow.config
+
+Input Options
+  bam            : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job5_minimap_res/farmBlank_alignment.bam
+  classifier     : minimap2
+
+Reference Options
+  database_set   : ncbi_16s_18s_28s_ITS
+  store_dir      : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db
+  database_sets  : [ncbi_16s_18s:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_16s_18s.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ref2taxid.targloci.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], ncbi_16s_18s_28s_ITS:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], SILVA_138_1:[database:null], Standard-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08gb_20231009.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPF-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPFP-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip]]
+
+Output Options
+  out_dir        : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job6_bam2tsv/blank_tsv
+
+Advanced Options
+  min_len        : 50
+  threads        : 32
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+--------------------------------------------------------------------------------
+If you use epi2me-labs/wf-metagenomics for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+
+--------------------------------------------------------------------------------
+This is epi2me-labs/wf-metagenomics v2.9.4-gb12d893.
+--------------------------------------------------------------------------------
+Checking inputs.
+Searching input for [.bam, .ubam] files.
+[-        ] process > checkBamHeaders                -
+[-        ] process > bamToFastq                     -
+[-        ] process > prepare_databases:download_... -
+[-        ] process > prepare_databases:download_... -
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+
+[-        ] process > checkBamHeaders                -
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+[-        ] process > checkBamHeaders                [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (1)
+[-        ] process > checkBamHeaders                [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[57/b02e8b] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (2)
+[75/744142] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[57/b02e8b] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (3)
+[75/744142] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[57/b02e8b] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (3)
+[75/744142] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... [  0%] 0 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (4)
+[75/744142] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[74/a17d44] process > minimap_pipeline:output_res... [  0%] 0 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (4)
+[75/744142] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[74/a17d44] process > minimap_pipeline:output_res... [  0%] 0 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (4)
+[75/744142] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[74/a17d44] process > minimap_pipeline:output_res... [100%] 1 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+
+executor >  slurm (4)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[-        ] process > bamToFastq                     [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[74/a17d44] process > minimap_pipeline:output_res... [ 50%] 1 of 2
+
+
+
+
+
+
+
+
+executor >  slurm (5)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[74/a17d44] process > minimap_pipeline:output_res... [ 50%] 1 of 2
+
+
+
+
+
+
+
+
+executor >  slurm (6)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [ 50%] 1 of 2
+
+executor >  slurm (6)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:makeReport    -
+[2c/0a7778] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (9)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:makeReport    [  0%] 0 of 1
+[1e/249de3] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (10)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[98/00de11] process > minimap_pipeline:makeReport... [  0%] 0 of 1
+[1e/249de3] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (10)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[98/00de11] process > minimap_pipeline:makeReport... [  0%] 0 of 1
+[1e/249de3] process > minimap_pipeline:output_res... [100%] 3 of 3
+
+executor >  slurm (11)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[98/00de11] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[ac/4e08a5] process > minimap_pipeline:output_res... [ 75%] 3 of 4
+
+executor >  slurm (11)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[98/00de11] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[ac/4e08a5] process > minimap_pipeline:output_res... [ 75%] 3 of 4
+
+executor >  slurm (11)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[98/00de11] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[ac/4e08a5] process > minimap_pipeline:output_res... [100%] 4 of 4 ✔
+
+executor >  slurm (11)
+[75/744142] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[4e/612b23] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[c6/d77ff0] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[57/b02e8b] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[aa/b1f3f4] process > minimap_pipeline:minimap (f... [100%] 1 of 1 ✔
+[c0/fc9ece] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[98/00de11] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[ac/4e08a5] process > minimap_pipeline:output_res... [100%] 4 of 4 ✔
+Completed at: 30-May-2024 17:13:23
+Duration    : 3m 6s
+CPU hours   : 0.4
+Succeeded   : 11
+
+
+N E X T F L O W  ~  version 23.04.3
+Launching `https://github.com/epi2me-labs/wf-metagenomics` [exotic_dijkstra] DSL2 - revision: b12d893856 [master]
+WARN: NEXTFLOW RECURSION IS A PREVIEW FEATURE - SYNTAX AND FUNCTIONALITY CAN CHANGE IN FUTURE RELEASES
+
+||||||||||   _____ ____ ___ ____  __  __ _____      _       _
+||||||||||  | ____|  _ \_ _|___ \|  \/  | ____|    | | __ _| |__  ___
+|||||       |  _| | |_) | |  __) | |\/| |  _| _____| |/ _` | '_ \/ __|
+|||||       | |___|  __/| | / __/| |  | | |__|_____| | (_| | |_) \__ \
+||||||||||  |_____|_|  |___|_____|_|  |_|_____|    |_|\__,_|_.__/|___/
+||||||||||  wf-metagenomics v2.9.4-gb12d893
+--------------------------------------------------------------------------------
+Core Nextflow options
+  revision       : master
+  runName        : exotic_dijkstra
+  containerEngine: singularity
+  launchDir      : /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+  workDir        : /work/yk132/CAFO_Nanopore_work/nf_working
+  projectDir     : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics
+  userName       : yk132
+  profile        : singularity
+  configFiles    : /hpc/home/yk132/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/nextflow.config, /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION/./nextflow.config
+
+Input Options
+  bam            : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job5_minimap_res/unclassified_alignment.bam
+  classifier     : minimap2
+
+Reference Options
+  database_set   : ncbi_16s_18s_28s_ITS
+  store_dir      : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job4_Minimap2_db
+  database_sets  : [ncbi_16s_18s:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_16s_18s.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ref2taxid.targloci.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], ncbi_16s_18s_28s_ITS:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_kraken2.tar.gz, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], SILVA_138_1:[database:null], Standard-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08gb_20231009.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPF-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPFP-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip]]
+
+Output Options
+  out_dir        : /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job6_bam2tsv/unclassified_tsv
+
+Advanced Options
+  min_len        : 50
+  threads        : 32
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+--------------------------------------------------------------------------------
+If you use epi2me-labs/wf-metagenomics for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+
+--------------------------------------------------------------------------------
+This is epi2me-labs/wf-metagenomics v2.9.4-gb12d893.
+--------------------------------------------------------------------------------
+Checking inputs.
+Searching input for [.bam, .ubam] files.
+[-        ] process > checkBamHeaders -
+[-        ] process > bamToFastq      -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+
+[-        ] process > checkBamHeaders                -
+[-        ] process > bamToFastq                     -
+[-        ] process > prepare_databases:download_... -
+[-        ] process > prepare_databases:download_... -
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:run_common... -
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+
+[-        ] process > checkBamHeaders                [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+
+executor >  slurm (2)
+[cb/4ed23e] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[-        ] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[db/47910f] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+
+executor >  slurm (3)
+[cb/4ed23e] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[db/47910f] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... -
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+
+executor >  slurm (3)
+[cb/4ed23e] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [  0%] 0 of 1
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[-        ] process > minimap_pipeline:output_res... [  0%] 0 of 1
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+
+executor >  slurm (4)
+[cb/4ed23e] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[dd/a03279] process > minimap_pipeline:output_res... [  0%] 0 of 2
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+
+executor >  slurm (5)
+[cb/4ed23e] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [  0%] 0 of 2
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+
+executor >  slurm (5)
+[cb/4ed23e] process > checkBamHeaders (1)            [  0%] 0 of 1
+[-        ] process > bamToFastq                     -
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+Note: Empty files or those files whose reads have been discarded after filtering based on read length and/or read quality will not appear in the report and will be excluded from subsequent analysis.
+Minimap2 pipeline.
+Preparing databases.
+Using default taxonomy database.
+Using a default database.
+[skipping] Stored process > prepare_databases:download_reference_ref2taxid
+[skipping] Stored process > prepare_databases:download_unpack_taxonomy
+
+executor >  slurm (5)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[-        ] process > bamToFastq                     [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+
+
+
+
+
+
+
+executor >  slurm (6)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+
+
+
+
+
+
+
+executor >  slurm (6)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [  0%] 0 of 1
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (6)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:minimap       -
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:createAbun... -
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (7)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (8)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [  0%] 0 of 1
+[-        ] process > minimap_pipeline:makeReport    -
+[a8/7ae64c] process > minimap_pipeline:output_res... [100%] 2 of 2
+
+executor >  slurm (9)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[-        ] process > minimap_pipeline:makeReport    [  0%] 0 of 1
+[39/f4cfe0] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (10)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[6c/ff183b] process > minimap_pipeline:makeReport... [  0%] 0 of 1
+[39/f4cfe0] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (10)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[6c/ff183b] process > minimap_pipeline:makeReport... [  0%] 0 of 1
+[39/f4cfe0] process > minimap_pipeline:output_res... [ 66%] 2 of 3
+
+executor >  slurm (10)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[6c/ff183b] process > minimap_pipeline:makeReport... [  0%] 0 of 1
+[39/f4cfe0] process > minimap_pipeline:output_res... [100%] 3 of 3
+
+executor >  slurm (10)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[6c/ff183b] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[39/f4cfe0] process > minimap_pipeline:output_res... [ 75%] 3 of 4
+
+executor >  slurm (11)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[6c/ff183b] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[8d/4902dc] process > minimap_pipeline:output_res... [ 75%] 3 of 4
+
+executor >  slurm (11)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[6c/ff183b] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[8d/4902dc] process > minimap_pipeline:output_res... [100%] 4 of 4 ✔
+
+executor >  slurm (11)
+[cb/4ed23e] process > checkBamHeaders (1)            [100%] 1 of 1 ✔
+[fd/7d1c27] process > bamToFastq (1)                 [100%] 1 of 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[skipped  ] process > prepare_databases:download_... [100%] 1 of 1, stored: 1 ✔
+[de/ca29f3] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[db/47910f] process > minimap_pipeline:run_common... [100%] 1 of 1 ✔
+[79/7a801b] process > minimap_pipeline:minimap (u... [100%] 1 of 1 ✔
+[73/269e2a] process > minimap_pipeline:createAbun... [100%] 1 of 1 ✔
+[6c/ff183b] process > minimap_pipeline:makeReport... [100%] 1 of 1 ✔
+[8d/4902dc] process > minimap_pipeline:output_res... [100%] 4 of 4 ✔
+Completed at: 30-May-2024 17:22:48
+Duration    : 9m 18s
+CPU hours   : 2.6
+Succeeded   : 11
+
+

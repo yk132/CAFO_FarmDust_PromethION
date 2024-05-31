@@ -238,4 +238,33 @@ INFO:    Using cached SIF image
 [2024-05-30 16:53:52] INFO: Median overlap divergence: 0.401262
 [2024-05-30 16:53:52] INFO: Parsing reads
 [2024-05-30 16:54:00] INFO: Aligning reads to the graph
-0% 10% 20% 30% 40% 50% 60% 70% 
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 17:07:06] INFO: Aligned read sequence: 415744739 / 618077654 (0.672642)
+[2024-05-30 17:07:06] INFO: Median overlap divergence: 0.221826
+[2024-05-30 17:07:07] INFO: Mean edge coverage: 6
+[2024-05-30 17:07:07] INFO: Simplifying the graph
+[2024-05-30 17:07:12] INFO: >>>STAGE: contigger
+[2024-05-30 17:07:12] INFO: Generating contigs
+[2024-05-30 17:07:12] INFO: Reading sequences
+[2024-05-30 17:07:22] INFO: Generated 973 contigs
+[2024-05-30 17:07:22] INFO: Added 3 scaffold connections
+[2024-05-30 17:07:25] INFO: >>>STAGE: polishing
+[2024-05-30 17:07:25] INFO: Polishing genome (1/1)
+[2024-05-30 17:07:25] INFO: Running minimap2
+[2024-05-30 17:42:39] INFO: Separating alignment into bubbles
+[2024-05-30 17:43:07] INFO: Alignment error rate: 0.411953
+[2024-05-30 17:43:07] INFO: Correcting bubbles
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2024-05-30 21:08:47] INFO: >>>STAGE: finalize
+[2024-05-30 21:08:48] INFO: Assembly statistics:
+
+	Total length:	25038837
+	Fragments:	564
+	Fragments N50:	81640
+	Largest frg:	343781
+	Scaffolds:	0
+	Mean coverage:	7
+
+[2024-05-30 21:08:48] INFO: Final assembly: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/Unclassified/assembly.fasta
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image

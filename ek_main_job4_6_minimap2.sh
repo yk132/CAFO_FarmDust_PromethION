@@ -20,13 +20,13 @@ mkdir -p ${LOG_DIR}
 
 # Run minimap2 and convert res to bam 
 ## this is for CHECKING!!!
-JOBID_5=$(sbatch --parsable --job-name=minimap --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job5_minimap2.sh)
+# JOBID_5=$(sbatch --parsable --job-name=minimap --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job5_minimap2.sh)
 
 #JOBID_9=$(sbatch --parsable --dependency=afterok:${JOBID_8} --job-name=minimap --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job9_minimap2.sh)
 
 # Convert minimap2 res to tsv
 ## this is for CHECKING!! 
-# JOBID_10=$(sbatch --parsable --job-name=tsv --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job10_bam_to_tsv.sh)
+JOBID_6=$(sbatch --parsable --job-name=tsv --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job6_bam2tsv.sh)
 
 #JOBID_10=$(sbatch --parsable --dependency=afterok:${JOBID_8}:${JOBID_9} --job-name=tsv --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job10_bam_to_tsv.sh)
 
