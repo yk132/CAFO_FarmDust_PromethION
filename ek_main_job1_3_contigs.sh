@@ -21,6 +21,9 @@ mkdir -p ${LOG_DIR}
 #JOBID_2=$(sbatch --parsable --dependency=afterok:${JOBID_1} --job-name=flye --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_metaFlye.sh)
 ###JOBID_2=$(sbatch --parsable --job-name=flye --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_metaFlye.sh)
 
+# check quality before medaka with quast
+JOBID_4=$(sbatch --parsable --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job3_quast.sh)
+
 # polish with medaka
 
 # and let's check contig quality 
