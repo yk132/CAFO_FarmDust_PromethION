@@ -18,18 +18,12 @@ mkdir -p ${LOG_DIR}
 # JOBID_1=$(sbatch --parsable --job-name=fastQC --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job1_fastqc.sh)
 
 # build contigs; need to add dependency later! 
-JOBID_2=$(sbatch --parsable --job-name=flye --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_metaFlye.sh)
+#JOBID_2=$(sbatch --parsable --dependency=afterok:${JOBID_1} --job-name=flye --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_metaFlye.sh)
+###JOBID_2=$(sbatch --parsable --job-name=flye --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job2_metaFlye.sh)
 
-#### PICK UP HERE!! 
+# polish with medaka
 
-# quailty check with QUAST
-#JOBID_6=$(sbatch --parsable --dependency=afterok:${JOBID_5} --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job6_QUAST.sh)
+# and let's check contig quality 
+#JOBID_4=$(sbatch --parsable --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_QUAST.sh)
+#JOBID_4=$(sbatch --parsable --dependency=afterok:${JOBID_3} --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_QUAST.sh)
 
-# Mapping: for now, build bowtie2 index
-#JOBID_7=$(sbatch --parsable --dependency=afterok:${JOBID_5}:${JOBID_6} --job-name=mapping --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job7_mapping.sh)
-
-## This is for CHECKING new code only! Dependency has been removed. 
-#JOBID_6=$(sbatch --parsable --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job6_QUAST.sh)
-
-## This is for CHECKING new code only! Dependency has been removed. 
-# JOBID_7=$(sbatch --parsable --job-name=bwa --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job7_bwa.sh)
