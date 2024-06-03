@@ -1,0 +1,34 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+WARNING: Could not find any nv files on this host!
+Cannot import pyabpoa, some features may not be available.
+Traceback (most recent call last):
+  File "/home/epi2melabs/conda/bin/medaka", line 8, in <module>
+    sys.exit(main())
+  File "/home/epi2melabs/conda/lib/python3.8/site-packages/medaka/medaka.py", line 801, in main
+    args = parser.parse_args()
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1768, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1800, in parse_known_args
+    namespace, args = self._parse_known_args(args, namespace)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1988, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1965, in consume_positionals
+    take_action(action, args)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1874, in take_action
+    action(self, namespace, argument_values, option_string)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1159, in __call__
+    subnamespace, arg_strings = parser.parse_known_args(arg_strings, None)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1800, in parse_known_args
+    namespace, args = self._parse_known_args(args, namespace)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 2006, in _parse_known_args
+    start_index = consume_optional(start_index)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1946, in consume_optional
+    take_action(action, args, option_string)
+  File "/home/epi2melabs/conda/lib/python3.8/argparse.py", line 1874, in take_action
+    action(self, namespace, argument_values, option_string)
+  File "/home/epi2melabs/conda/lib/python3.8/site-packages/medaka/medaka.py", line 50, in __call__
+    model = medaka.models.model_from_basecaller(input_file, variant=variant)
+  File "/home/epi2melabs/conda/lib/python3.8/site-packages/medaka/models.py", line 140, in model_from_basecaller
+    raise ValueError(
+ValueError: Input file did not contain precisely 1 basecaller model reference.

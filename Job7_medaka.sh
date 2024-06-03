@@ -2,15 +2,16 @@
 
 #SBATCH --mem=20G
 #SBATCH --cpus-per-task=6
+#SBATCH --mail-type=ALL
 # #SBATCH --partition=chsi-gpu
 # #SBATCH -A chsi
+
 # #SBATCH --ntasks=1
 # #SBATCH --gres=gpu:1
 
 # #SBATCH --exclusive
 
 set -u
-
 
 #-------------------------------
 export STORE_DIR="/hpc/home/yk132/storage"
@@ -29,10 +30,10 @@ export BLANK_ASSEMBLED="${FLYE_BLANK_DIR}/assembly.fasta"
 export UNCLASSIFIED_ASSEMBLED="${FLYE_UNCLASSIFIED_DIR}/assembly.fasta"
 # medaka output
 export MEDAKA_RES_DIR="${CAFO_RES_DIR}/Job7_medaka"
-export MEDAKA_FARMA="${QUAST_RES_DIR}/Farm_A_polished."
-export MEDAKA_FARMC="${QUAST_RES_DIR}/Farm_C"
-export MEDAKA_BLANK="${QUAST_RES_DIR}/Blank"
-export MEDAKA_UNCLASSIFIED="${QUAST_RES_DIR}/Unclassified"
+export MEDAKA_FARMA="${MEDAKA_RES_DIR}/Farm_A"
+export MEDAKA_FARMC="${MEDAKA_RES_DIR}/Farm_C"
+export MEDAKA_BLANK="${MEDAKA_RES_DIR}/Blank"
+export MEDAKA_UNCLASSIFIED="${MEDAKA_RES_DIR}/Unclassified"
 #-------------------------------
 
 
