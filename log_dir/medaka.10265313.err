@@ -1,0 +1,15 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Cannot import pyabpoa, some features may not be available.
+usage: medaka consensus [-h] [--debug | --quiet] [--batch_size BATCH_SIZE]
+                        [--chunk_len CHUNK_LEN] [--chunk_ovlp CHUNK_OVLP]
+                        [--regions REGIONS [REGIONS ...]]
+                        [--model MODEL | --auto_model TYPE INPUT]
+                        [--RG READGROUP] [--threads THREADS]
+                        [--bam_workers BAM_WORKERS] [--bam_chunk BAM_CHUNK]
+                        [--check_output] [--save_features]
+                        [--tag_name TAG_NAME] [--tag_value TAG_VALUE]
+                        [--tag_keep_missing]
+                        bam output
+medaka consensus: error: the following arguments are required: bam, output
+/var/spool/slurmd/job10265313/slurm_script: line 60: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job2_flye_res/FarmA/assembly.fasta: Permission denied

@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
-
-#SBATCH --mem=20G
-#SBATCH --cpus-per-task=6
+#SBATCH --partition=dmcshared
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=300G
 #SBATCH --mail-type=ALL
-# #SBATCH --partition=chsi-gpu
-# #SBATCH -A chsi
-
-# #SBATCH --ntasks=1
-# #SBATCH --gres=gpu:1
-
-# #SBATCH --exclusive
 
 set -u
 
@@ -34,6 +28,8 @@ export MEDAKA_FARMA="${MEDAKA_RES_DIR}/Farm_A"
 export MEDAKA_FARMC="${MEDAKA_RES_DIR}/Farm_C"
 export MEDAKA_BLANK="${MEDAKA_RES_DIR}/Blank"
 export MEDAKA_UNCLASSIFIED="${MEDAKA_RES_DIR}/Unclassified"
+export MODEL="r1041_e82_400bps_sup_v4.3.0"
+export NTHREADS="32"
 #-------------------------------
 
 
@@ -56,9 +52,9 @@ mkdir -p $MEDAKA_UNCLASSIFIED
 
 # polish contig with medaka 
 singularity exec \
-	--nv \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://nanozoo/medaka:1.11.3--ce388c3 \
-	medaka consensus --auto_model consensus \
+	medaka consensus --model $MODEL \
+	--threads $NTHREADS
  	$FARMA_ASSEMBLED -i ${FASTQ_DIR}/Farm_A.fastq.gz -o $MEDAKA_FARMA
