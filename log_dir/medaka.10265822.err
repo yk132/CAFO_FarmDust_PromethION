@@ -1,0 +1,5 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Cannot import pyabpoa, some features may not be available.
+Cannot import pyabpoa, some features may not be available.
+Invalid option: --.

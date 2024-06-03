@@ -29,18 +29,9 @@ export MEDAKA_FARMC="${MEDAKA_RES_DIR}/Farm_C"
 export MEDAKA_BLANK="${MEDAKA_RES_DIR}/Blank"
 export MEDAKA_UNCLASSIFIED="${MEDAKA_RES_DIR}/Unclassified"
 export MODEL="r1041_e82_400bps_sup_v4.3.0"
-export NTHREADS="32"
+export NTHREADS="28" # Cpus requested - 4
 #-------------------------------
 
-
-#-------------------------------
-if [ -v SLURM_GPUS_ON_NODE ] && (( $SLURM_GPUS_ON_NODE >= 1 )); then
-  export DORADO_DEVICE="cuda:all" ;
-else 
-  export DORADO_DEVICE="cpu" ;
-fi
-echo $DORADO_DEVICE
-#-----------------------------
 
 mkdir -p $MEDAKA_RES_DIR
 mkdir -p $MEDAKA_FARMA
@@ -55,6 +46,31 @@ singularity exec \
 	--bind /work:/work \
 	--bind /hpc/group:/hpc/group \
         docker://nanozoo/medaka:1.11.3--ce388c3 \
-	medaka consensus --model $MODEL \
-	--threads $NTHREADS
- 	$FARMA_ASSEMBLED -i ${FASTQ_DIR}/Farm_A.fastq.gz -o $MEDAKA_FARMA
+	medaka_consensus -m $MODEL \
+	-t $NTHREADS \
+ 	-d $FARMA_ASSEMBLED -i ${FASTQ_DIR}/Farm_A.fastq.gz -o $MEDAKA_FARMA
+
+singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://nanozoo/medaka:1.11.3--ce388c3 \
+	medaka_consensus -m $MODEL \
+	-t $NTHREADS \
+ 	-d $FARMC_ASSEMBLED -i ${FASTQ_DIR}/Farm_A.fastq.gz -o $MEDAKA_FARMC
+
+singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://nanozoo/medaka:1.11.3--ce388c3 \
+	medaka_consensus -m $MODEL \
+	-t $NTHREADS \
+ 	-d $BLANK_ASSEMBLED -i ${FASTQ_DIR}/Farm_A.fastq.gz -o $MEDAKA_BLANK
+
+singularity exec \
+	--bind /work:/work \
+	--bind /hpc/group:/hpc/group \
+        docker://nanozoo/medaka:1.11.3--ce388c3 \
+	medaka_consensus -m $MODEL \
+	-t $NTHREADS \
+ 	-d $UNCLASSIFIED_ASSEMBLED -i ${FASTQ_DIR}/Farm_A.fastq.gz -o $MEDAKA_UNCLASSIFIED
+

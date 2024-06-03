@@ -1,0 +1,490 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Cannot import pyabpoa, some features may not be available.
+Cannot import pyabpoa, some features may not be available.
+Cannot import pyabpoa, some features may not be available.
+Cannot import pyabpoa, some features may not be available.
+Cannot import pyabpoa, some features may not be available.
+[12:38:45 - MdlStrTF] Successfully removed temporary files from /tmp/tmpod90k0__.
+Cannot import pyabpoa, some features may not be available.
+[12:38:45 - MdlStrTF] Successfully removed temporary files from /tmp/tmpd_penv4q.
+Creating fai index file /hpc/group/gunschlab/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/FarmA/assembly.fasta.fai
+Creating mmi index file /hpc/group/gunschlab/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/FarmA/assembly.fasta.map-ont.mmi
+[M::mm_idx_gen::0.115*0.40] collected minimizers
+[M::mm_idx_gen::0.135*0.72] sorted minimizers
+[M::main::0.142*0.73] loaded/built the index for 76 target sequence(s)
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 76
+[M::mm_idx_stat::0.144*0.73] distinct minimizers: 107289 (83.57% are singletons); average occurrences: 3.557; average spacing: 3.680; total length: 1404601
+[M::main] Version: 2.26-r1175
+[M::main] CMD: minimap2 -I 16G -x map-ont -d /hpc/group/gunschlab/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/FarmA/assembly.fasta.map-ont.mmi /hpc/group/gunschlab/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/FarmA/assembly.fasta
+[M::main] Real time: 0.171 sec; CPU: 0.111 sec; Peak RSS: 0.018 GB
+[M::main::0.066*0.26] loaded/built the index for 76 target sequence(s)
+[M::mm_mapopt_update::0.068*0.28] mid_occ = 592
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 76
+[M::mm_idx_stat::0.070*0.30] distinct minimizers: 107289 (83.57% are singletons); average occurrences: 3.557; average spacing: 3.680; total length: 1404601
+[M::worker_pipeline::126.767*17.92] mapped 79560 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: minimap2 -x map-ont --secondary=no -L --MD -A 2 -B 4 -O 4,24 -E 2,1 -t 28 -a /hpc/group/gunschlab/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job2_flye_res/FarmA/assembly.fasta.map-ont.mmi /hpc/group/gunschlab/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/demux_simplex_filtered/Farm_A.fastq.gz
+[M::main] Real time: 126.777 sec; CPU: 2271.535 sec; Peak RSS: 16.512 GB
+[bam_sort_core] merging from 0 files and 28 in-memory blocks...
+Cannot import pyabpoa, some features may not be available.
+[12:41:10 - Predict] Reducing threads to 2, anymore is a waste.
+[12:41:10 - Predict] It looks like you are running medaka without a GPU and attempted to set a high number of threads. We have scaled this down to an optimal number. If you wish to improve performance please see https://nanoporetech.github.io/medaka/installation.html#improving-parallelism.
+[12:41:10 - Predict] Setting tensorflow inter/intra-op threads to 2/1.
+[12:41:10 - Predict] Processing region(s): contig_1:0-4806 contig_10:0-1611 contig_100:0-13789 contig_101:0-26185 contig_102:0-20824 contig_103:0-10190 contig_104:0-75 contig_105:0-909 contig_107:0-10147 contig_108:0-15110 contig_109:0-32323 contig_11:0-14559 contig_110:0-24157 contig_12:0-3708 contig_16:0-12108 contig_18:0-11509 contig_19:0-11074 contig_2:0-24354 contig_22:0-7736 contig_23:0-4605 contig_24:0-44392 contig_25:0-1358 contig_29:0-195349 contig_3:0-4810 contig_32:0-15096 contig_33:0-8633 contig_34:0-9041 contig_35:0-4175 contig_37:0-3031 contig_38:0-23930 contig_39:0-11776 contig_4:0-5531 contig_40:0-3045 contig_41:0-31158 contig_42:0-72933 contig_43:0-7403 contig_44:0-21994 contig_47:0-45583 contig_48:0-3746 contig_5:0-11801 contig_51:0-37843 contig_52:0-4052 contig_54:0-4574 contig_55:0-6159 contig_58:0-3584 contig_6:0-17911 contig_60:0-9593 contig_61:0-24971 contig_62:0-9072 contig_63:0-1502 contig_65:0-2112 contig_68:0-9917 contig_7:0-1532 contig_72:0-14727 contig_75:0-5653 contig_76:0-5696 contig_77:0-15512 contig_78:0-1852 contig_79:0-40687 contig_8:0-1663 contig_80:0-9468 contig_81:0-31267 contig_82:0-7952 contig_87:0-1333 contig_88:0-59711 contig_89:0-9602 contig_90:0-3983 contig_91:0-75891 contig_92:0-47966 contig_93:0-49340 contig_94:0-18675 contig_95:0-4199 contig_96:0-9084 contig_97:0-8566 contig_98:0-58662 contig_99:0-15726
+[12:41:10 - Predict] Using model: /home/epi2melabs/conda/lib/python3.8/site-packages/medaka/data/r1041_e82_400bps_sup_v4.3.0_model.tar.gz.
+[12:41:10 - BAMFile] Creating pool of 16 BAM file sets.
+[12:41:10 - Predict] Processing 37 long region(s) with batching.
+[12:41:12 - MdlStrTF] Model <keras.engine.sequential.Sequential object at 0x7fcdff6ce610>
+[12:41:12 - MdlStrTF] loading weights from /tmp/tmpb_f6ntfn/model/variables/variables (using expect partial)
+[12:41:12 - Sampler] Initializing sampler for consensus of region contig_100:0-13789.
+[12:41:12 - Sampler] Initializing sampler for consensus of region contig_101:0-26185.
+[12:41:12 - PWorker] Running inference for 1.2M draft bases.
+[12:41:12 - Feature] Pileup counts do not span requested region, requested contig_101:0-26185, received 0-1654.
+[12:41:12 - Feature] Pileup counts do not span requested region, requested contig_100:0-13789, received 0-6553.
+[12:41:12 - Feature] Processed contig_101:0.0-1654.0 (median depth 1.0)
+[12:41:12 - Feature] Pileup counts do not span requested region, requested contig_101:0-26185, received 7663-22557.
+[12:41:12 - Feature] Processed contig_100:0.0-6553.0 (median depth 3.0)
+[12:41:12 - Feature] Pileup counts do not span requested region, requested contig_100:0-13789, received 8048-9584.
+[12:41:12 - Feature] Processed contig_101:7663.0-22557.0 (median depth 1.0)
+[12:41:12 - Feature] Pileup counts do not span requested region, requested contig_101:0-26185, received 22885-26184.
+[12:41:12 - Feature] Processed contig_100:8048.0-9584.0 (median depth 1.0)
+[12:41:12 - Feature] Pileup counts do not span requested region, requested contig_100:0-13789, received 9883-13788.
+[12:41:12 - Feature] Processed contig_100:9883.0-13788.0 (median depth 1.0)
+[12:41:12 - Sampler] Took 0.54s to make features.
+[12:41:12 - Sampler] Region contig_100:0.0-6553.0 (9537 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:12 - Sampler] Region contig_100:8048.0-9584.0 (1744 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:12 - Sampler] Region contig_100:9883.0-13788.0 (4738 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:12 - Sampler] Initializing sampler for consensus of region contig_102:0-20824.
+[12:41:12 - Feature] Processed contig_101:22885.0-26184.0 (median depth 1.0)
+[12:41:12 - Sampler] Took 0.56s to make features.
+[12:41:12 - Sampler] Region contig_101:0.0-1654.0 (1716 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:12 - Sampler] Region contig_101:22885.0-26184.0 (3550 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:12 - Sampler] Initializing sampler for consensus of region contig_103:0-10190.
+[12:41:12 - Feature] Pileup counts do not span requested region, requested contig_103:0-10190, received 0-5511.
+[12:41:13 - Feature] Processed contig_103:0.0-5511.0 (median depth 2.0)
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_103:0-10190, received 6844-10189.
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_102:0-20824, received 3256-14997.
+[12:41:13 - Feature] Processed contig_103:6844.0-10189.0 (median depth 3.0)
+[12:41:13 - Sampler] Took 0.31s to make features.
+[12:41:13 - Sampler] Region contig_103:0.0-5511.0 (6813 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:13 - Sampler] Region contig_103:6844.0-10189.0 (4252 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:13 - Sampler] Initializing sampler for consensus of region contig_107:0-10147.
+[12:41:13 - Feature] Processed contig_102:3256.0-14997.0 (median depth 2.0)
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_102:0-20824, received 16350-17991.
+[12:41:13 - Feature] Processed contig_102:16350.0-17991.0 (median depth 1.0)
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_102:0-20824, received 18064-19067.
+[12:41:13 - Feature] Processed contig_102:18064.0-19067.0 (median depth 2.0)
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_102:0-20824, received 19799-20823.
+[12:41:13 - Feature] Processed contig_102:19799.0-20823.0 (median depth 1.0)
+[12:41:13 - Sampler] Took 0.51s to make features.
+[12:41:13 - Sampler] Region contig_102:16350.0-17991.0 (1679 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:13 - Sampler] Region contig_102:18064.0-19067.0 (1334 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:13 - Sampler] Region contig_102:19799.0-20823.0 (1025 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_107:0-10147, received 0-3268.
+[12:41:13 - Sampler] Initializing sampler for consensus of region contig_108:0-15110.
+[12:41:13 - Feature] Processed contig_107:0.0-3268.0 (median depth 1.0)
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_107:0-10147, received 3302-10146.
+[12:41:13 - Feature] Processed contig_107:3302.0-10146.0 (median depth 2.0)
+[12:41:13 - Sampler] Took 0.38s to make features.
+[12:41:13 - Sampler] Region contig_107:0.0-3268.0 (3272 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:13 - Sampler] Region contig_107:3302.0-10146.0 (9331 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:13 - Sampler] Initializing sampler for consensus of region contig_109:0-32323.
+[12:41:13 - Feature] Processed contig_108:0.0-15109.0 (median depth 1.0)
+[12:41:13 - Sampler] Took 0.25s to make features.
+[12:41:13 - Sampler] Initializing sampler for consensus of region contig_11:0-14559.
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_109:0-32323, received 444-32322.
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_11:0-14559, received 355-1136.
+[12:41:13 - Feature] Processed contig_109:444.0-32322.0 (median depth 2.0)
+[12:41:13 - Sampler] Took 0.22s to make features.
+[12:41:13 - Sampler] Initializing sampler for consensus of region contig_110:0-24157.
+[12:41:13 - Feature] Processed contig_11:355.0-1136.0 (median depth 1.0)
+[12:41:13 - Feature] Pileup counts do not span requested region, requested contig_11:0-14559, received 2383-14558.
+[12:41:14 - Feature] Processed contig_11:2383.0-14558.0 (median depth 2.0)
+[12:41:14 - Sampler] Took 0.34s to make features.
+[12:41:14 - Sampler] Region contig_11:355.0-1136.0 (809 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Initializing sampler for consensus of region contig_16:0-12108.
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_110:0-24157, received 0-3824.
+[12:41:14 - Feature] Processed contig_110:0.0-3824.0 (median depth 1.0)
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_110:0-24157, received 4844-11033.
+[12:41:14 - Feature] Processed contig_110:4844.0-11033.0 (median depth 1.0)
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_110:0-24157, received 11252-13706.
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_16:0-12108, received 3050-3888.
+[12:41:14 - Feature] Processed contig_16:3050.0-3888.0 (median depth 1.0)
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_16:0-12108, received 10558-11053.
+[12:41:14 - Feature] Processed contig_16:10558.0-11053.0 (median depth 1.0)
+[12:41:14 - Sampler] Took 0.32s to make features.
+[12:41:14 - Sampler] Region contig_16:3050.0-3888.0 (955 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Region contig_16:10558.0-11053.0 (809 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Feature] Processed contig_110:11252.0-13706.0 (median depth 3.0)
+[12:41:14 - Sampler] Initializing sampler for consensus of region contig_18:0-11509.
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_110:0-24157, received 14192-22687.
+[12:41:14 - Feature] Processed contig_110:14192.0-22687.0 (median depth 1.0)
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_110:0-24157, received 22993-23334.
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_18:0-11509, received 10266-11508.
+[12:41:14 - Feature] Processed contig_110:22993.0-23334.0 (median depth 1.0)
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_110:0-24157, received 23358-23495.
+[12:41:14 - Feature] Processed contig_110:23358.0-23495.0 (median depth 1.0)
+[12:41:14 - Sampler] Took 0.79s to make features.
+[12:41:14 - Sampler] Region contig_110:0.0-3824.0 (4310 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Region contig_110:4844.0-11033.0 (6567 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Region contig_110:11252.0-13706.0 (3327 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Feature] Processed contig_18:10266.0-11508.0 (median depth 3.0)
+[12:41:14 - Sampler] Took 0.25s to make features.
+[12:41:14 - Sampler] Region contig_110:14192.0-22687.0 (8751 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Region contig_18:10266.0-11508.0 (1250 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Region contig_110:22993.0-23334.0 (398 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Initializing sampler for consensus of region contig_19:0-11074.
+[12:41:14 - Sampler] Region contig_110:23358.0-23495.0 (156 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:14 - Sampler] Initializing sampler for consensus of region contig_2:0-24354.
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_19:0-11074, received 271-11073.
+[12:41:14 - Feature] Processed contig_19:271.0-11073.0 (median depth 2.0)
+[12:41:14 - Sampler] Took 0.23s to make features.
+[12:41:14 - Feature] Pileup counts do not span requested region, requested contig_2:0-24354, received 779-3384.
+[12:41:14 - Sampler] Initializing sampler for consensus of region contig_24:0-44392.
+[12:41:15 - Feature] Processed contig_2:779.0-3384.0 (median depth 3.0)
+[12:41:15 - Feature] Pileup counts do not span requested region, requested contig_2:0-24354, received 11861-24351.
+[12:41:15 - Feature] Processed contig_2:11861.0-24351.0 (median depth 8.0)
+[12:41:15 - Sampler] Took 0.52s to make features.
+[12:41:15 - Sampler] Region contig_2:779.0-3384.0 (3614 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:15 - Feature] Pileup counts do not span requested region, requested contig_24:0-44392, received 0-4794.
+[12:41:15 - Sampler] Initializing sampler for consensus of region contig_29:0-195349.
+[12:41:15 - Feature] Processed contig_24:0.0-4794.0 (median depth 1.0)
+[12:41:15 - Feature] Pileup counts do not span requested region, requested contig_24:0-44392, received 4803-12820.
+[12:41:15 - Feature] Processed contig_24:4803.0-12820.0 (median depth 1.0)
+[12:41:15 - Feature] Pileup counts do not span requested region, requested contig_24:0-44392, received 14333-44391.
+[12:41:15 - Feature] Pileup counts do not span requested region, requested contig_29:0-195349, received 0-91534.
+[12:41:15 - Feature] Processed contig_24:14333.0-44391.0 (median depth 42.0)
+[12:41:15 - Sampler] Took 0.68s to make features.
+[12:41:15 - Sampler] Region contig_24:0.0-4794.0 (5200 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:15 - Sampler] Region contig_24:4803.0-12820.0 (8900 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:15 - Sampler] Initializing sampler for consensus of region contig_32:0-15096.
+[12:41:15 - Feature] Processed contig_29:0.0-91534.0 (median depth 3.0)
+[12:41:15 - Feature] Pileup counts do not span requested region, requested contig_29:0-195349, received 92027-94605.
+[12:41:15 - Feature] Processed contig_29:92027.0-94605.0 (median depth 1.0)
+[12:41:15 - Feature] Pileup counts do not span requested region, requested contig_29:0-195349, received 108937-194766.
+[12:41:16 - Feature] Processed contig_32:0.0-15095.0 (median depth 51.0)
+[12:41:16 - Sampler] Took 0.34s to make features.
+[12:41:16 - Sampler] Initializing sampler for consensus of region contig_38:0-23930.
+[12:41:16 - Feature] Processed contig_29:108937.0-194766.0 (median depth 1.0)
+[12:41:16 - Sampler] Took 0.84s to make features.
+[12:41:16 - Sampler] Region contig_29:92027.0-94605.0 (2790 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:16 - Sampler] Initializing sampler for consensus of region contig_39:0-11776.
+[12:41:16 - Feature] Processed contig_38:0.0-23929.0 (median depth 21.0)
+[12:41:16 - Sampler] Took 0.34s to make features.
+[12:41:16 - Sampler] Initializing sampler for consensus of region contig_41:0-31158.
+[12:41:16 - Feature] Processed contig_39:0.0-11775.0 (median depth 62.0)
+[12:41:16 - Sampler] Took 0.37s to make features.
+[12:41:16 - Sampler] Initializing sampler for consensus of region contig_42:0-72933.
+[12:41:16 - Feature] Pileup counts do not span requested region, requested contig_41:0-31158, received 0-26008.
+[12:41:16 - Feature] Processed contig_41:0.0-26008.0 (median depth 41.0)
+[12:41:16 - Feature] Pileup counts do not span requested region, requested contig_41:0-31158, received 27992-30720.
+[12:41:16 - Feature] Pileup counts do not span requested region, requested contig_42:0-72933, received 7-63762.
+[12:41:16 - Feature] Processed contig_41:27992.0-30720.0 (median depth 1.0)
+[12:41:16 - Sampler] Took 0.40s to make features.
+[12:41:16 - Sampler] Region contig_41:27992.0-30720.0 (2791 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:16 - Sampler] Initializing sampler for consensus of region contig_44:0-21994.
+[12:41:16 - Feature] Processed contig_42:7.0-63762.0 (median depth 10.0)
+[12:41:16 - Feature] Pileup counts do not span requested region, requested contig_42:0-72933, received 64191-72932.
+[12:41:16 - Feature] Pileup counts do not span requested region, requested contig_44:0-21994, received 0-21976.
+[12:41:16 - Feature] Processed contig_42:64191.0-72932.0 (median depth 1.0)
+[12:41:16 - Sampler] Took 0.37s to make features.
+[12:41:16 - Sampler] Region contig_42:64191.0-72932.0 (8835 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:16 - Sampler] Initializing sampler for consensus of region contig_47:0-45583.
+[12:41:17 - Feature] Processed contig_44:0.0-21976.0 (median depth 4.0)
+[12:41:17 - Sampler] Took 0.19s to make features.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_5:0-11801.
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_47:0-45583, received 5823-45156.
+[12:41:17 - Feature] Processed contig_47:5823.0-45156.0 (median depth 9.0)
+[12:41:17 - Sampler] Took 0.18s to make features.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_51:0-37843.
+[12:41:17 - Feature] Processed contig_5:0.0-11800.0 (median depth 2.0)
+[12:41:17 - Sampler] Took 0.16s to make features.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_6:0-17911.
+[12:41:17 - Feature] Processed contig_6:0.0-17910.0 (median depth 12.0)
+[12:41:17 - Sampler] Took 0.14s to make features.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_61:0-24971.
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_51:0-37843, received 0-35967.
+[12:41:17 - Feature] Processed contig_51:0.0-35967.0 (median depth 64.0)
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_51:0-37843, received 36183-37842.
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_61:0-24971, received 0-3508.
+[12:41:17 - Feature] Processed contig_51:36183.0-37842.0 (median depth 1.0)
+[12:41:17 - Sampler] Took 0.37s to make features.
+[12:41:17 - Sampler] Region contig_51:36183.0-37842.0 (1883 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_72:0-14727.
+[12:41:17 - Feature] Processed contig_61:0.0-3508.0 (median depth 5.0)
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_61:0-24971, received 3897-24970.
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_72:0-14727, received 2586-9907.
+[12:41:17 - Feature] Processed contig_61:3897.0-24970.0 (median depth 9.0)
+[12:41:17 - Sampler] Took 0.32s to make features.
+[12:41:17 - Sampler] Region contig_61:0.0-3508.0 (6763 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_77:0-15512.
+[12:41:17 - Feature] Processed contig_72:2586.0-9907.0 (median depth 1.0)
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_72:0-14727, received 12162-14228.
+[12:41:17 - Feature] Processed contig_72:12162.0-14228.0 (median depth 1.0)
+[12:41:17 - Sampler] Took 0.19s to make features.
+[12:41:17 - Sampler] Region contig_72:2586.0-9907.0 (8068 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:17 - Sampler] Region contig_72:12162.0-14228.0 (2250 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_79:0-40687.
+[12:41:17 - Feature] Processed contig_77:0.0-15511.0 (median depth 1.0)
+[12:41:17 - Sampler] Took 0.17s to make features.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_81:0-31267.
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_79:0-40687, received 0-40108.
+[12:41:17 - Feature] Pileup counts do not span requested region, requested contig_81:0-31267, received 0-30629.
+[12:41:17 - Feature] Processed contig_79:0.0-40108.0 (median depth 9.0)
+[12:41:17 - Sampler] Took 0.23s to make features.
+[12:41:17 - Sampler] Initializing sampler for consensus of region contig_88:0-59711.
+[12:41:18 - Feature] Processed contig_81:0.0-30629.0 (median depth 5.0)
+[12:41:18 - Sampler] Took 0.19s to make features.
+[12:41:18 - Sampler] Initializing sampler for consensus of region contig_91:0-75891.
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_88:0-59711, received 804-47566.
+[12:41:18 - Feature] Processed contig_88:804.0-47566.0 (median depth 4.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_88:0-59711, received 49278-50281.
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_91:0-75891, received 0-16206.
+[12:41:18 - Feature] Processed contig_88:49278.0-50281.0 (median depth 1.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_88:0-59711, received 51324-57106.
+[12:41:18 - Feature] Processed contig_88:51324.0-57106.0 (median depth 1.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_88:0-59711, received 57298-59402.
+[12:41:18 - Feature] Processed contig_88:57298.0-59402.0 (median depth 1.0)
+[12:41:18 - Sampler] Took 0.46s to make features.
+[12:41:18 - Sampler] Region contig_88:49278.0-50281.0 (1004 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Region contig_88:51324.0-57106.0 (6863 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Region contig_88:57298.0-59402.0 (2107 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Initializing sampler for consensus of region contig_92:0-47966.
+[12:41:18 - Feature] Processed contig_91:0.0-16206.0 (median depth 26.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_91:0-75891, received 16285-21831.
+[12:41:18 - Feature] Processed contig_91:16285.0-21831.0 (median depth 1.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_91:0-75891, received 21841-22760.
+[12:41:18 - Feature] Processed contig_91:21841.0-22760.0 (median depth 1.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_91:0-75891, received 23273-25408.
+[12:41:18 - Feature] Processed contig_91:23273.0-25408.0 (median depth 1.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_91:0-75891, received 27021-27419.
+[12:41:18 - Feature] Processed contig_91:27021.0-27419.0 (median depth 1.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_91:0-75891, received 29537-55454.
+[12:41:18 - Feature] Processed contig_92:0.0-47965.0 (median depth 12.0)
+[12:41:18 - Sampler] Took 0.33s to make features.
+[12:41:18 - Sampler] Initializing sampler for consensus of region contig_93:0-49340.
+[12:41:18 - Feature] Processed contig_91:29537.0-55454.0 (median depth 2.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_91:0-75891, received 58553-71700.
+[12:41:18 - Feature] Processed contig_91:58553.0-71700.0 (median depth 2.0)
+[12:41:18 - Sampler] Took 0.78s to make features.
+[12:41:18 - Sampler] Region contig_91:16285.0-21831.0 (5934 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Region contig_91:21841.0-22760.0 (931 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Region contig_91:23273.0-25408.0 (2144 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Region contig_91:27021.0-27419.0 (439 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Initializing sampler for consensus of region contig_94:0-18675.
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_94:0-18675, received 18-931.
+[12:41:18 - Feature] Processed contig_94:18.0-931.0 (median depth 1.0)
+[12:41:18 - Feature] Pileup counts do not span requested region, requested contig_94:0-18675, received 1778-18674.
+[12:41:18 - Feature] Processed contig_93:0.0-49339.0 (median depth 2.0)
+[12:41:18 - Sampler] Took 0.08s to make features.
+[12:41:18 - Sampler] Initializing sampler for consensus of region contig_98:0-58662.
+[12:41:18 - Feature] Processed contig_94:1778.0-18674.0 (median depth 3.0)
+[12:41:18 - Sampler] Took 0.07s to make features.
+[12:41:18 - Sampler] Region contig_94:18.0-931.0 (914 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:18 - Sampler] Initializing sampler for consensus of region contig_99:0-15726.
+[12:41:19 - Feature] Pileup counts do not span requested region, requested contig_99:0-15726, received 1694-6865.
+[12:41:19 - Feature] Pileup counts do not span requested region, requested contig_98:0-58662, received 21-241.
+[12:41:19 - Feature] Processed contig_98:21.0-241.0 (median depth 1.0)
+[12:41:19 - Feature] Processed contig_99:1694.0-6865.0 (median depth 6.0)
+[12:41:19 - Feature] Pileup counts do not span requested region, requested contig_98:0-58662, received 5255-7519.
+[12:41:19 - Feature] Pileup counts do not span requested region, requested contig_99:0-15726, received 13781-15725.
+[12:41:19 - Feature] Processed contig_98:5255.0-7519.0 (median depth 1.0)
+[12:41:19 - Feature] Pileup counts do not span requested region, requested contig_98:0-58662, received 8166-9728.
+[12:41:19 - Feature] Processed contig_99:13781.0-15725.0 (median depth 1.0)
+[12:41:19 - Sampler] Took 0.37s to make features.
+[12:41:19 - Sampler] Region contig_99:1694.0-6865.0 (9246 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:19 - Sampler] Region contig_99:13781.0-15725.0 (2179 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:19 - Feature] Processed contig_98:8166.0-9728.0 (median depth 1.0)
+[12:41:19 - Feature] Pileup counts do not span requested region, requested contig_98:0-58662, received 10087-15230.
+[12:41:19 - Feature] Processed contig_98:10087.0-15230.0 (median depth 1.0)
+[12:41:19 - Feature] Pileup counts do not span requested region, requested contig_98:0-58662, received 16548-55623.
+[12:41:19 - Feature] Processed contig_98:16548.0-55623.0 (median depth 1.0)
+[12:41:19 - Sampler] Took 0.65s to make features.
+[12:41:19 - Sampler] Region contig_98:21.0-241.0 (221 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:19 - Sampler] Region contig_98:5255.0-7519.0 (2388 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:19 - Sampler] Region contig_98:8166.0-9728.0 (1618 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:19 - Sampler] Region contig_98:10087.0-15230.0 (5651 positions) is smaller than inference chunk length 10000, quarantining.
+[12:41:32 - PWorker] Batches in cache: 3.
+[12:41:32 - PWorker] 33.7% Done (0.4/1.2 Mbases) in 20.2s
+[12:41:42 - PWorker] Batches in cache: 2.
+[12:41:42 - PWorker] 65.3% Done (0.8/1.2 Mbases) in 30.5s
+[12:41:48 - PWorker] Batches in cache: 1.
+[12:41:49 - PWorker] Processed 3 batches
+[12:41:49 - PWorker] All done, 46 remainder regions.
+[12:41:49 - Predict] Processing 85 short region(s).
+[12:41:50 - MdlStrTF] Model <keras.engine.sequential.Sequential object at 0x7fcde40d4c70>
+[12:41:50 - MdlStrTF] loading weights from /tmp/tmpb_f6ntfn/model/variables/variables (using expect partial)
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_1:0-4806.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_10:0-1611.
+[12:41:50 - PWorker] Running inference for 0.3M draft bases.
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_10:0-1611, received 9-314.
+[12:41:50 - Feature] Processed contig_10:9.0-314.0 (median depth 2.0)
+[12:41:50 - Sampler] Took 0.09s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_104:0-75.
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_1:0-4806, received 20-4676.
+[12:41:50 - Sampler] Took 0.03s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_105:0-909.
+[12:41:50 - Sampler] Took 0.04s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_12:0-3708.
+[12:41:50 - Feature] Processed contig_1:20.0-4676.0 (median depth 4.0)
+[12:41:50 - Sampler] Took 0.20s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_22:0-7736.
+[12:41:50 - Sampler] Took 0.04s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_23:0-4605.
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_22:0-7736, received 0-7069.
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_23:0-4605, received 182-4604.
+[12:41:50 - Feature] Processed contig_22:0.0-7069.0 (median depth 2.0)
+[12:41:50 - Sampler] Took 0.17s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_25:0-1358.
+[12:41:50 - Feature] Processed contig_23:182.0-4604.0 (median depth 1.0)
+[12:41:50 - Sampler] Took 0.14s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_3:0-4810.
+[12:41:50 - Sampler] Took 0.02s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_33:0-8633.
+[12:41:50 - Sampler] Took 0.03s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_34:0-9041.
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_34:0-9041, received 1084-9040.
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_33:0-8633, received 50-3368.
+[12:41:50 - Feature] Processed contig_33:50.0-3368.0 (median depth 2.0)
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_33:0-8633, received 3824-7054.
+[12:41:50 - Feature] Processed contig_34:1084.0-9040.0 (median depth 2.0)
+[12:41:50 - Sampler] Took 0.18s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_35:0-4175.
+[12:41:50 - Feature] Processed contig_33:3824.0-7054.0 (median depth 1.0)
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_33:0-8633, received 7687-8291.
+[12:41:50 - Feature] Processed contig_33:7687.0-8291.0 (median depth 1.0)
+[12:41:50 - Sampler] Took 0.28s to make features.
+[12:41:50 - Sampler] Initializing sampler for consensus of region contig_37:0-3031.
+[12:41:50 - Feature] Pileup counts do not span requested region, requested contig_35:0-4175, received 146-4172.
+[12:41:51 - Feature] Processed contig_35:146.0-4172.0 (median depth 3.0)
+[12:41:51 - Sampler] Took 0.16s to make features.
+[12:41:51 - Sampler] Initializing sampler for consensus of region contig_4:0-5531.
+[12:41:51 - Feature] Processed contig_37:0.0-3030.0 (median depth 13.0)
+[12:41:51 - Sampler] Took 0.16s to make features.
+[12:41:51 - Sampler] Initializing sampler for consensus of region contig_40:0-3045.
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_4:0-5531, received 85-5355.
+[12:41:51 - Feature] Processed contig_4:85.0-5355.0 (median depth 4.0)
+[12:41:51 - Sampler] Took 0.09s to make features.
+[12:41:51 - Sampler] Initializing sampler for consensus of region contig_43:0-7403.
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_40:0-3045, received 0-2209.
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_43:0-7403, received 0-645.
+[12:41:51 - Feature] Processed contig_40:0.0-2209.0 (median depth 4.0)
+[12:41:51 - Sampler] Took 0.01s to make features.
+[12:41:51 - Sampler] Initializing sampler for consensus of region contig_48:0-3746.
+[12:41:51 - Feature] Processed contig_43:0.0-645.0 (median depth 1.0)
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_43:0-7403, received 2283-2845.
+[12:41:51 - Feature] Processed contig_43:2283.0-2845.0 (median depth 1.0)
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_43:0-7403, received 2873-3482.
+[12:41:51 - Feature] Processed contig_43:2873.0-3482.0 (median depth 1.0)
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_43:0-7403, received 4021-4251.
+[12:41:51 - Feature] Processed contig_43:4021.0-4251.0 (median depth 1.0)
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_43:0-7403, received 4587-4979.
+[12:41:51 - Feature] Processed contig_43:4587.0-4979.0 (median depth 1.0)
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_43:0-7403, received 5105-7335.
+[12:41:51 - Feature] Pileup counts do not span requested region, requested contig_48:0-3746, received 43-3745.
+[12:41:51 - Feature] Processed contig_43:5105.0-7335.0 (median depth 1.0)
+[12:41:51 - Sampler] Took 0.01s to make features.
+[12:41:51 - Sampler] Initializing sampler for consensus of region contig_52:0-4052.
+[12:41:51 - Feature] Processed contig_48:43.0-3745.0 (median depth 1.0)
+[12:41:51 - Sampler] Took 0.01s to make features.
+[12:41:51 - Feature] Processed contig_52:0.0-4051.0 (median depth 20.0)
+[12:41:51 - Sampler] Took 0.02s to make features.
+[12:41:53 - Sampler] Initializing sampler for consensus of region contig_54:0-4574.
+[12:41:53 - Feature] Pileup counts do not span requested region, requested contig_54:0-4574, received 0-3123.
+[12:41:53 - Feature] Processed contig_54:0.0-3123.0 (median depth 3.0)
+[12:41:53 - Feature] Pileup counts do not span requested region, requested contig_54:0-4574, received 3785-4113.
+[12:41:53 - Feature] Processed contig_54:3785.0-4113.0 (median depth 1.0)
+[12:41:53 - Sampler] Took 0.01s to make features.
+[12:42:19 - PWorker] Batches in cache: 8.
+[12:42:19 - PWorker] 1.2% Done (0.0/0.3 Mbases) in 29.4s
+[12:42:19 - Sampler] Initializing sampler for consensus of region contig_55:0-6159.
+[12:42:19 - Feature] Pileup counts do not span requested region, requested contig_55:0-6159, received 119-4853.
+[12:42:19 - Feature] Processed contig_55:119.0-4853.0 (median depth 1.0)
+[12:42:19 - Sampler] Took 0.01s to make features.
+[12:42:56 - PWorker] Batches in cache: 8.
+[12:42:56 - PWorker] 3.0% Done (0.0/0.3 Mbases) in 65.8s
+[12:43:20 - PWorker] Batches in cache: 8.
+[12:43:20 - PWorker] 4.1% Done (0.0/0.3 Mbases) in 89.8s
+[12:43:20 - Sampler] Initializing sampler for consensus of region contig_58:0-3584.
+[12:43:20 - Feature] Processed contig_58:0.0-3583.0 (median depth 11.0)
+[12:43:20 - Sampler] Took 0.01s to make features.
+[12:44:03 - PWorker] Batches in cache: 8.
+[12:44:03 - PWorker] 6.2% Done (0.0/0.3 Mbases) in 133.3s
+[12:44:03 - Sampler] Initializing sampler for consensus of region contig_60:0-9593.
+[12:44:03 - Feature] Pileup counts do not span requested region, requested contig_60:0-9593, received 0-3243.
+[12:44:03 - Feature] Processed contig_60:0.0-3243.0 (median depth 2.0)
+[12:44:03 - Feature] Pileup counts do not span requested region, requested contig_60:0-9593, received 3667-9388.
+[12:44:03 - Feature] Processed contig_60:3667.0-9388.0 (median depth 3.0)
+[12:44:03 - Sampler] Took 0.02s to make features.
+[12:44:21 - PWorker] Batches in cache: 8.
+[12:44:21 - PWorker] 6.9% Done (0.0/0.3 Mbases) in 150.9s
+[12:44:21 - Sampler] Initializing sampler for consensus of region contig_62:0-9072.
+[12:44:21 - Feature] Processed contig_62:0.0-9071.0 (median depth 3.0)
+[12:44:21 - Sampler] Took 0.02s to make features.
+[12:44:38 - PWorker] Batches in cache: 8.
+[12:44:38 - PWorker] 7.6% Done (0.0/0.3 Mbases) in 168.3s
+[12:44:41 - Sampler] Initializing sampler for consensus of region contig_63:0-1502.
+[12:44:41 - Feature] Pileup counts do not span requested region, requested contig_63:0-1502, received 1228-1377.
+[12:44:41 - Feature] Processed contig_63:1228.0-1377.0 (median depth 1.0)
+[12:44:41 - Sampler] Took 0.00s to make features.
+[12:45:11 - PWorker] Batches in cache: 8.
+[12:45:11 - PWorker] 8.8% Done (0.0/0.3 Mbases) in 200.8s
+[12:45:11 - Sampler] Initializing sampler for consensus of region contig_65:0-2112.
+[12:45:11 - Sampler] Took 0.00s to make features.
+[12:45:11 - Sampler] Initializing sampler for consensus of region contig_68:0-9917.
+[12:45:11 - Feature] Pileup counts do not span requested region, requested contig_68:0-9917, received 0-7534.
+[12:45:11 - Feature] Processed contig_68:0.0-7534.0 (median depth 2.0)
+[12:45:11 - Feature] Pileup counts do not span requested region, requested contig_68:0-9917, received 7537-9791.
+[12:45:11 - Feature] Processed contig_68:7537.0-9791.0 (median depth 1.0)
+[12:45:11 - Sampler] Took 0.02s to make features.
+[12:45:55 - PWorker] Batches in cache: 8.
+[12:45:55 - PWorker] 9.6% Done (0.0/0.3 Mbases) in 245.3s
+[12:45:55 - Sampler] Initializing sampler for consensus of region contig_7:0-1532.
+[12:45:55 - Feature] Pileup counts do not span requested region, requested contig_7:0-1532, received 242-1186.
+[12:45:55 - Feature] Processed contig_7:242.0-1186.0 (median depth 1.0)
+[12:45:55 - Sampler] Took 0.00s to make features.
+[12:46:28 - PWorker] Batches in cache: 8.
+[12:46:28 - PWorker] 10.9% Done (0.0/0.3 Mbases) in 278.5s
+[12:46:42 - PWorker] Batches in cache: 8.
+[12:46:42 - PWorker] 11.2% Done (0.0/0.3 Mbases) in 292.7s
+[12:46:42 - Sampler] Initializing sampler for consensus of region contig_75:0-5653.
+[12:46:43 - Feature] Pileup counts do not span requested region, requested contig_75:0-5653, received 167-261.
+[12:46:43 - Feature] Processed contig_75:167.0-261.0 (median depth 1.0)
+[12:46:43 - Feature] Pileup counts do not span requested region, requested contig_75:0-5653, received 1054-1663.
+[12:46:43 - Feature] Processed contig_75:1054.0-1663.0 (median depth 1.0)
+[12:46:43 - Feature] Pileup counts do not span requested region, requested contig_75:0-5653, received 1832-5652.
+[12:46:43 - Feature] Processed contig_75:1832.0-5652.0 (median depth 1.0)
+[12:46:43 - Sampler] Took 0.05s to make features.
+[12:46:46 - Sampler] Initializing sampler for consensus of region contig_76:0-5696.
+[12:46:46 - Feature] Pileup counts do not span requested region, requested contig_76:0-5696, received 86-5695.
+[12:46:46 - Feature] Processed contig_76:86.0-5695.0 (median depth 4.0)
+[12:46:46 - Sampler] Took 0.11s to make features.
+[12:46:49 - PWorker] Batches in cache: 8.
+[12:46:52 - Sampler] Initializing sampler for consensus of region contig_78:0-1852.
+[12:46:52 - Feature] Pileup counts do not span requested region, requested contig_78:0-1852, received 0-1850.
+[12:46:52 - Feature] Processed contig_78:0.0-1850.0 (median depth 11.0)
+[12:46:52 - Sampler] Took 0.01s to make features.
+[12:46:53 - PWorker] 11.8% Done (0.0/0.3 Mbases) in 302.9s
+[12:46:55 - PWorker] Batches in cache: 8.
+[12:46:55 - Sampler] Initializing sampler for consensus of region contig_8:0-1663.
+[12:46:55 - Sampler] Took 0.00s to make features.
+[12:46:55 - Sampler] Initializing sampler for consensus of region contig_80:0-9468.
+[12:46:55 - Feature] Pileup counts do not span requested region, requested contig_80:0-9468, received 4-9467.
+[12:46:55 - Feature] Processed contig_80:4.0-9467.0 (median depth 6.0)
+[12:46:55 - Sampler] Took 0.02s to make features.
+[12:47:08 - PWorker] Batches in cache: 8.
+[12:47:08 - PWorker] 12.4% Done (0.0/0.3 Mbases) in 318.5s
+[12:47:08 - Sampler] Initializing sampler for consensus of region contig_82:0-7952.
+[12:47:08 - Feature] Pileup counts do not span requested region, requested contig_82:0-7952, received 0-7332.
+[12:47:08 - Feature] Processed contig_82:0.0-7332.0 (median depth 1.0)
+[12:47:08 - Feature] Pileup counts do not span requested region, requested contig_82:0-7952, received 7555-7878.
+[12:47:08 - Feature] Processed contig_82:7555.0-7878.0 (median depth 1.0)
+[12:47:08 - Sampler] Took 0.01s to make features.
+[12:47:32 - PWorker] Batches in cache: 8.
+[12:47:32 - PWorker] 13.2% Done (0.0/0.3 Mbases) in 342.3s
+[12:47:32 - Sampler] Initializing sampler for consensus of region contig_87:0-1333.
+[12:47:32 - Feature] Pileup counts do not span requested region, requested contig_87:0-1333, received 10-1332.
+[12:47:32 - Feature] Processed contig_87:10.0-1332.0 (median depth 3.0)
+[12:47:32 - Sampler] Took 0.01s to make features.
+slurmstepd: error: *** JOB 10265947 ON dcc-chsi-06 CANCELLED AT 2024-06-03T12:47:56 ***
