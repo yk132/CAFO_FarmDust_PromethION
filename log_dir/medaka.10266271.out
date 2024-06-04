@@ -1,0 +1,52 @@
+TF_CPP_MIN_LOG_LEVEL is set to '3'
+Checking program versions
+This is medaka 1.11.3
+Program    Version    Required   Pass     
+bcftools   1.18       1.11       True     
+bgzip      1.18       1.11       True     
+minimap2   2.26       2.11       True     
+samtools   1.18       1.11       True     
+tabix      1.18       1.11       True     
+WARNING: Output /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A already exists, may use old results.
+Aligning basecalls to draft
+Running medaka consensus
+Polished assembly written to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta, have a nice day.
+TF_CPP_MIN_LOG_LEVEL is set to '3'
+Checking program versions
+This is medaka 1.11.3
+Program    Version    Required   Pass     
+bcftools   1.18       1.11       True     
+bgzip      1.18       1.11       True     
+minimap2   2.26       2.11       True     
+samtools   1.18       1.11       True     
+tabix      1.18       1.11       True     
+WARNING: Output /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C already exists, may use old results.
+Aligning basecalls to draft
+Running medaka consensus
+Polished assembly written to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta, have a nice day.
+TF_CPP_MIN_LOG_LEVEL is set to '3'
+Checking program versions
+This is medaka 1.11.3
+Program    Version    Required   Pass     
+bcftools   1.18       1.11       True     
+bgzip      1.18       1.11       True     
+minimap2   2.26       2.11       True     
+samtools   1.18       1.11       True     
+tabix      1.18       1.11       True     
+WARNING: Output /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank already exists, may use old results.
+Aligning basecalls to draft
+Running medaka consensus
+Polished assembly written to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta, have a nice day.
+TF_CPP_MIN_LOG_LEVEL is set to '3'
+Checking program versions
+This is medaka 1.11.3
+Program    Version    Required   Pass     
+bcftools   1.18       1.11       True     
+bgzip      1.18       1.11       True     
+minimap2   2.26       2.11       True     
+samtools   1.18       1.11       True     
+tabix      1.18       1.11       True     
+WARNING: Output /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified already exists, may use old results.
+Aligning basecalls to draft
+Running medaka consensus
+Polished assembly written to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta, have a nice day.
