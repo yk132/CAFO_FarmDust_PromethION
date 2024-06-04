@@ -1,0 +1,360 @@
+/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta
+/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta
+/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta
+/hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta
+/quast-5.2.0/metaquast.py /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta -t 16 -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job8_medaka_quast/Farm_A
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:30:59
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/metaquast.log
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta ==> consensus
+
+No references are provided, starting to search for reference genomes in SILVA 16S rRNA database and to download them from NCBI...
+
+2024-06-04 13:31:02
+Running BlastN..
+  processing consensus
+  BLAST results for consensus are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/quast_downloaded_references/blast.res_consensus...
+
+Reference genomes are not found.
+
+NOTICE: No references are provided, starting regular QUAST with MetaGeneMark gene finder
+/quast-5.2.0/quast.py -t 16 --min-identity 90.0 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A --labels consensus
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:31:10
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/quast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+
+CWD: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+Main parameters: 
+  MODE: meta, threads: 16, min contig length: 500, min alignment length: 65, min alignment IDY: 90.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta ==> consensus
+
+2024-06-04 13:31:10
+Running Basic statistics processor...
+  Contig files: 
+    consensus
+  Calculating N50 and L50...
+    consensus, N50 = 38166, L50 = 11, auN = 56108.9, Total length = 1415139, GC % = 51.43, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/basic_stats/GC_content_plot.pdf
+  Drawing consensus GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/basic_stats/consensus_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2024-06-04 13:31:11
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2024-06-04 13:31:11
+RESULTS:
+  Text versions of total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/report.html
+  PDF version (tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/report.pdf
+  Icarus (contig browser) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/icarus.html
+  Log is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_A/quast.log
+
+Finished: 2024-06-04 13:31:11
+Elapsed time: 0:00:01.474156
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
+/quast-5.2.0/metaquast.py /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta -t 16 -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job8_medaka_quast/Farm_C
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:31:13
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/metaquast.log
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta ==> consensus
+
+No references are provided, starting to search for reference genomes in SILVA 16S rRNA database and to download them from NCBI...
+
+2024-06-04 13:31:14
+Running BlastN..
+  processing consensus
+  BLAST results for consensus are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/quast_downloaded_references/blast.res_consensus...
+
+Reference genomes are not found.
+
+NOTICE: No references are provided, starting regular QUAST with MetaGeneMark gene finder
+/quast-5.2.0/quast.py -t 16 --min-identity 90.0 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C --labels consensus
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:31:16
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/quast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+
+CWD: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+Main parameters: 
+  MODE: meta, threads: 16, min contig length: 500, min alignment length: 65, min alignment IDY: 90.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta ==> consensus
+
+2024-06-04 13:31:16
+Running Basic statistics processor...
+  Contig files: 
+    consensus
+  Calculating N50 and L50...
+    consensus, N50 = 62611, L50 = 7, auN = 50995.9, Total length = 1052742, GC % = 60.10, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/basic_stats/GC_content_plot.pdf
+  Drawing consensus GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/basic_stats/consensus_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2024-06-04 13:31:17
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2024-06-04 13:31:17
+RESULTS:
+  Text versions of total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/report.html
+  PDF version (tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/report.pdf
+  Icarus (contig browser) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/icarus.html
+  Log is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Farm_C/quast.log
+
+Finished: 2024-06-04 13:31:17
+Elapsed time: 0:00:01.187411
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
+/quast-5.2.0/metaquast.py /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta -t 16 -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job8_medaka_quast/Blank
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:31:18
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/metaquast.log
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta ==> consensus
+
+No references are provided, starting to search for reference genomes in SILVA 16S rRNA database and to download them from NCBI...
+
+2024-06-04 13:31:19
+Running BlastN..
+  processing consensus
+  BLAST results for consensus are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/quast_downloaded_references/blast.res_consensus...
+
+Reference genomes are not found.
+
+NOTICE: No references are provided, starting regular QUAST with MetaGeneMark gene finder
+/quast-5.2.0/quast.py -t 16 --min-identity 90.0 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank --labels consensus
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:31:21
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/quast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+
+CWD: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+Main parameters: 
+  MODE: meta, threads: 16, min contig length: 500, min alignment length: 65, min alignment IDY: 90.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta ==> consensus
+
+2024-06-04 13:31:22
+Running Basic statistics processor...
+  Contig files: 
+    consensus
+  Calculating N50 and L50...
+    consensus, N50 = 46137, L50 = 5, auN = 49623.9, Total length = 750777, GC % = 59.33, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/basic_stats/GC_content_plot.pdf
+  Drawing consensus GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/basic_stats/consensus_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2024-06-04 13:31:22
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2024-06-04 13:31:23
+RESULTS:
+  Text versions of total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/report.html
+  PDF version (tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/report.pdf
+  Icarus (contig browser) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/icarus.html
+  Log is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Blank/quast.log
+
+Finished: 2024-06-04 13:31:23
+Elapsed time: 0:00:01.125494
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
+/quast-5.2.0/metaquast.py /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta -t 16 -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job8_medaka_quast/Unclassified
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:31:24
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/metaquast.log
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta ==> consensus
+
+No references are provided, starting to search for reference genomes in SILVA 16S rRNA database and to download them from NCBI...
+
+2024-06-04 13:31:25
+Running BlastN..
+  processing consensus
+  BLAST results for consensus are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/quast_downloaded_references/blast.res_consensus...
+
+Reference genomes are not found.
+
+NOTICE: No references are provided, starting regular QUAST with MetaGeneMark gene finder
+/quast-5.2.0/quast.py -t 16 --min-identity 90.0 /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta -o /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified --labels consensus
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 86
+
+Started: 2024-06-04 13:32:36
+
+Logging to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/quast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+
+CWD: /hpc/group/gunschlab/yk132/storage/CAFO_FarmDust_PromethION
+Main parameters: 
+  MODE: meta, threads: 16, min contig length: 500, min alignment length: 65, min alignment IDY: 90.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta ==> consensus
+
+2024-06-04 13:32:37
+Running Basic statistics processor...
+  Contig files: 
+    consensus
+  Calculating N50 and L50...
+    consensus, N50 = 82675, L50 = 89, auN = 105002.8, Total length = 25146527, GC % = 49.50, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/basic_stats/GC_content_plot.pdf
+  Drawing consensus GC content plot...
+    saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/basic_stats/consensus_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2024-06-04 13:32:38
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2024-06-04 13:32:39
+RESULTS:
+  Text versions of total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/report.html
+  PDF version (tables and plots) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/report.pdf
+  Icarus (contig browser) is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/icarus.html
+  Log is saved to /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust/CAFO_PromethION_output/Job8_medaka_quast/Unclassified/quast.log
+
+Finished: 2024-06-04 13:32:39
+Elapsed time: 0:00:02.977877
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

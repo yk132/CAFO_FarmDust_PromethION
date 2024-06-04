@@ -15,9 +15,9 @@ mkdir -p ${LOG_DIR}
 
 
 # polish with medaka
-JOBID_3=$(sbatch --parsable --job-name=medaka --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job7_medaka.sh)
+#JOBID_7=$(sbatch --parsable --job-name=medaka --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job7_medaka.sh)
 
 # and let's check contig quality 
-#JOBID_4=$(sbatch --parsable --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_QUAST.sh)
-#JOBID_4=$(sbatch --parsable --dependency=afterok:${JOBID_3} --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job4_QUAST.sh)
+JOBID_8=$(sbatch --parsable --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job8_polished_quast.sh)
+#JOBID_8=$(sbatch --parsable --dependency=afterok:${JOBID_7} --job-name=quast --output="$LOG_DIR/%x.%j.out" --error="$LOG_DIR/%x.%j.err" Job8_polished_quast.sh)
 
