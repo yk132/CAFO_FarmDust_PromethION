@@ -1,0 +1,25 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Setting up 'ncbi' in '/abricate-1.0.1/db/ncbi'
+mkdir /abricate-1.0.1/db/ncbi/src: Read-only file system at /abricate-1.0.1/bin/abricate-get_db line 56.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Using nucl database ncbi:  5386 sequences -  2022-Nov-16
+Processing: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta
+Found 0 genes in /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta
+Tip: abricate can also find virulence factors; use --list to see all supported databases.
+Done.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Using nucl database ncbi:  5386 sequences -  2022-Nov-16
+Processing: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta
+Found 0 genes in /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta
+Tip: remember that abricate is unable to find AMR-mediated SNPs.
+Done.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Using nucl database ncbi:  5386 sequences -  2022-Nov-16
+Processing: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta
+slurmstepd: error: *** JOB 10302245 ON dcc-chsi-09 CANCELLED AT 2024-06-04T13:59:19 ***

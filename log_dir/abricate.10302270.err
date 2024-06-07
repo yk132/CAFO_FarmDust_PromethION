@@ -1,0 +1,36 @@
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Setting up 'ncbi' in '/abricate-1.0.1/db/ncbi'
+mkdir /abricate-1.0.1/db/ncbi/src: Read-only file system at /abricate-1.0.1/bin/abricate-get_db line 56.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Using nucl database ncbi:  5386 sequences -  2022-Nov-16
+Processing: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta
+Found 0 genes in /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_A/consensus.fasta
+Tip: the --fofn option allows you to feed in a big list of files to run on.
+Done.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Using nucl database ncbi:  5386 sequences -  2022-Nov-16
+Processing: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta
+Found 0 genes in /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Farm_C/consensus.fasta
+Tip: you can use the --summary option to combine reports in a presence/absence matrix.
+Done.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Using nucl database ncbi:  5386 sequences -  2022-Nov-16
+Processing: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta
+Found 0 genes in /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Blank/consensus.fasta
+Tip: have a suggestion for abricate? Tell me at https://github.com/tseemann/abricate/issues
+Done.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
+Using nucl database ncbi:  5386 sequences -  2022-Nov-16
+Processing: /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta
+Found 0 genes in /hpc/home/yk132/storage/data/CAFO_FarmDust_PromethION/CAFO_FarmDust//CAFO_PromethION_output/Job7_medaka/Unclassified/consensus.fasta
+Tip: the --fofn option allows you to feed in a big list of files to run on.
+Done.
+INFO:    Environment variable SINGULARITY_TMPDIR is set, but APPTAINER_TMPDIR is preferred
+INFO:    Using cached SIF image
